@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace COMP329_Milestone3
 {
-    public partial class fm_MainForm : Form
+    public partial class fm_Booking : Form
     {
-        public fm_MainForm()
+        public fm_Booking()
         {
             InitializeComponent();
         }
