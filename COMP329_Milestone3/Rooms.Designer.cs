@@ -1,6 +1,6 @@
 ﻿namespace COMP329_Milestone3
 {
-    partial class fm_Rooms
+    partial class Rooms
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lb_AccommodationName = new System.Windows.Forms.Label();
+            this.lb_AName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_CheckInDate = new System.Windows.Forms.DateTimePicker();
+            this.pn_Container = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // lb_AccommodationName
+            // lb_AName
             // 
-            this.lb_AccommodationName.AutoSize = true;
-            this.lb_AccommodationName.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_AccommodationName.Location = new System.Drawing.Point(12, 26);
-            this.lb_AccommodationName.Name = "lb_AccommodationName";
-            this.lb_AccommodationName.Size = new System.Drawing.Size(266, 33);
-            this.lb_AccommodationName.TabIndex = 0;
-            this.lb_AccommodationName.Text = "Accommodation Name";
+            this.lb_AName.AutoSize = true;
+            this.lb_AName.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_AName.Location = new System.Drawing.Point(36, 26);
+            this.lb_AName.Name = "lb_AName";
+            this.lb_AName.Size = new System.Drawing.Size(266, 33);
+            this.lb_AName.TabIndex = 0;
+            this.lb_AName.Text = "Accommodation Name";
             // 
             // label1
             // 
@@ -53,24 +54,34 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Check-in:";
             // 
-            // dateTimePicker1
+            // dtp_CheckInDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(446, 35);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dtp_CheckInDate.Location = new System.Drawing.Point(446, 35);
+            this.dtp_CheckInDate.Name = "dtp_CheckInDate";
+            this.dtp_CheckInDate.Size = new System.Drawing.Size(200, 20);
+            this.dtp_CheckInDate.TabIndex = 2;
             // 
-            // fm_Rooms
+            // pn_Container
+            // 
+            this.pn_Container.AutoScroll = true;
+            this.pn_Container.Location = new System.Drawing.Point(29, 100);
+            this.pn_Container.Name = "pn_Container";
+            this.pn_Container.Size = new System.Drawing.Size(617, 313);
+            this.pn_Container.TabIndex = 3;
+            // 
+            // Rooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(674, 448);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.pn_Container);
+            this.Controls.Add(this.dtp_CheckInDate);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lb_AccommodationName);
-            this.Name = "fm_Rooms";
+            this.Controls.Add(this.lb_AName);
+            this.Name = "Rooms";
             this.Text = "Accommodation Name";
+            this.Load += new System.EventHandler(this.Rooms_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,9 +89,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lb_AccommodationName;
+        private System.Windows.Forms.Label lb_AName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_CheckInDate;
+        private System.Windows.Forms.Panel pn_Container;
     }
 }
 

@@ -14,5 +14,6 @@ namespace COMP329_Milestone3
             var ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["COMP329"].ConnectionString;
             return new OracleConnection(ConnectionString);
         }
+
     }
 }

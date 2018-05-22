@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.DataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,22 +11,61 @@ using System.Windows.Forms;
 
 namespace COMP329_Milestone3
 {
-    public partial class fm_MainForm : Form
+    public partial class MainForm : Form
     {
-        public fm_MainForm()
+        public MainForm()
         {
             InitializeComponent();
         }
-
-        private void btn_Test_Click(object sender, EventArgs e)
+        
+        private void MainForm_Load(object sender, EventArgs e)
         {
-            var myConnection = Db.Connection();
+            string cmd = "SELECT AID,AName,street,city,region,description,phone,email FROM ACCOMMODATION a INNER JOIN Company c on a.COMPANYID = c.COMPANYID";
+            LoadUserControls(cmd);
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            string city = tb_CityName.Text;
+            pn_Container.Controls.Clear();
+
+            string cmd = "SELECT AID,AName,street,city,region,description,phone,email FROM ACCOMMODATION a INNER JOIN Company c on a.COMPANYID = c.COMPANYID WHERE a.CITY = '" + city + "'"; ;
+            LoadUserControls(cmd);
+        }
+
+        private void LoadUserControls(string cmd)
+        {
+            OracleConnection myConnection = Db.Connection();
             myConnection.Open();
-            var myCommand = myConnection.CreateCommand();
-            myCommand.CommandText = "SELECT * FROM Company";
-            var reader = myCommand.ExecuteReader();
-            reader.Read();
-            Console.WriteLine(reader["CompanyID"]);
+            OracleCommand myCommand = myConnection.CreateCommand();
+            myCommand.CommandText = cmd;
+            OracleDataReader reader = myCommand.ExecuteReader();
+            
+            int top = 10;
+
+            while (reader.Read())
+            {
+                Accommodation data = new Accommodation();
+
+                data.AID =  (decimal) reader["AID"];
+                data.AName = reader["AName"].ToString();
+                data.Address = reader.GetString(2) + ", " + reader.GetString(3) + ", " + reader.GetString(4);
+                data.Description = reader.GetString(5);
+                data.PhoneNo = reader.GetString(6);
+                data.Email = reader.GetString(7);
+
+                var myUserControl = new Uc_Accommodations();
+                myUserControl.Top = top;
+                myUserControl.Left = 35;
+                myUserControl.data = data;
+
+                myUserControl.DataBind();
+
+                top = top + myUserControl.Height + 10;
+                pn_Container.Controls.Add(myUserControl);
+            }
+
+            myConnection.Close();
         }
     }
 }
