@@ -25,5 +25,16 @@ namespace COMP329_Milestone3
             lb_Description.Text = data.Description;
             lb_Price.Text = "NZ $" + data.Price;
         }
+
+        private void btn_Book_Click(object sender, EventArgs e)
+        {
+            var booking = new Booking();
+            booking.AID = data.AID;
+            booking.RoomTypeID = data.RoomTypeID;
+            booking.RName = data.RName;
+            booking.Price = data.Price;
+            booking.CheckInDate = data.CheckInDate;
+            booking.ShowDialog();
+        }
     }
 }

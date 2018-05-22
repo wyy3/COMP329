@@ -47,7 +47,7 @@
             // lb_Description
             // 
             this.lb_Description.AutoSize = true;
-            this.lb_Description.BackColor = System.Drawing.Color.AliceBlue;
+            this.lb_Description.BackColor = System.Drawing.Color.LightSteelBlue;
             this.lb_Description.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Description.Location = new System.Drawing.Point(17, 43);
             this.lb_Description.Name = "lb_Description";
@@ -75,6 +75,7 @@
             this.btn_Book.TabIndex = 9;
             this.btn_Book.Text = "Book Now";
             this.btn_Book.UseVisualStyleBackColor = true;
+            this.btn_Book.Click += new System.EventHandler(this.btn_Book_Click);
             // 
             // Uc_Rooms
             // 

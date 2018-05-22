@@ -60,6 +60,7 @@
             this.dtp_CheckInDate.Name = "dtp_CheckInDate";
             this.dtp_CheckInDate.Size = new System.Drawing.Size(200, 20);
             this.dtp_CheckInDate.TabIndex = 2;
+            this.dtp_CheckInDate.ValueChanged += new System.EventHandler(this.dtp_CheckInDate_ValueChanged);
             // 
             // pn_Container
             // 

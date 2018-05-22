@@ -26,7 +26,7 @@ namespace COMP329_Milestone3
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            string city = tb_CityName.Text;
+            string city = tb_CityName.Text.Trim();
             pn_Container.Controls.Clear();
 
             string cmd = "SELECT AID,AName,street,city,region,description,phone,email FROM ACCOMMODATION a INNER JOIN Company c on a.COMPANYID = c.COMPANYID WHERE a.CITY = '" + city + "'"; ;
@@ -64,7 +64,7 @@ namespace COMP329_Milestone3
                 top = top + myUserControl.Height + 10;
                 pn_Container.Controls.Add(myUserControl);
             }
-
+            reader.Close();
             myConnection.Close();
         }
     }
