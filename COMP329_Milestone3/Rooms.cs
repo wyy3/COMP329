@@ -39,7 +39,7 @@ namespace COMP329_Milestone3
 
             //NEED TO TEST THIS QUERY!!!
             myCommand.CommandText = "SELECT ROOMTYPEID, PRICE, DESCRIPTION, QUANTITY, RNAME, ACCOMMODATIONID FROM ROOM r WHERE r.ACCOMMODATIONID = " + AID +
-                " AND r.QUANTITY > coalesce ((SELECT COUNT(bc.ROOMTYPEID) FROM Booking bc WHERE bc.CHECKINDATE = '" + date + "' GROUP BY bc.ROOMTYPEID),0)";
+                " AND r.QUANTITY > coalesce ((SELECT COUNT(bc.ROOMTYPEID) FROM Booking bc WHERE bc.CHECKINDATE = '" + date + "' AND r.ROOMTYPEID = bc.ROOMTYPEID GROUP BY bc.ROOMTYPEID),0)";
             OracleDataReader reader = myCommand.ExecuteReader();
 
             int top = 10;
@@ -54,6 +54,7 @@ namespace COMP329_Milestone3
                 data.RName = (string)reader["RName"];
                 data.AID = (decimal)reader["AccommodationID"];
                 data.CheckInDate = date;
+                data.AName = AName;
 
                 var myUserControl = new Uc_Rooms();
                 myUserControl.Top = top;
