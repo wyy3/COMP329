@@ -38,7 +38,7 @@
             // 
             this.lb_RName.AutoSize = true;
             this.lb_RName.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_RName.Location = new System.Drawing.Point(15, 10);
+            this.lb_RName.Location = new System.Drawing.Point(12, 13);
             this.lb_RName.Name = "lb_RName";
             this.lb_RName.Size = new System.Drawing.Size(150, 33);
             this.lb_RName.TabIndex = 2;
@@ -49,7 +49,7 @@
             this.lb_Description.AutoSize = true;
             this.lb_Description.BackColor = System.Drawing.Color.LightSteelBlue;
             this.lb_Description.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Description.Location = new System.Drawing.Point(17, 43);
+            this.lb_Description.Location = new System.Drawing.Point(14, 47);
             this.lb_Description.Name = "lb_Description";
             this.lb_Description.Size = new System.Drawing.Size(83, 19);
             this.lb_Description.TabIndex = 7;
@@ -60,7 +60,7 @@
             this.lb_Price.AutoSize = true;
             this.lb_Price.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Price.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lb_Price.Location = new System.Drawing.Point(249, 24);
+            this.lb_Price.Location = new System.Drawing.Point(231, 17);
             this.lb_Price.Name = "lb_Price";
             this.lb_Price.Size = new System.Drawing.Size(111, 29);
             this.lb_Price.TabIndex = 8;
@@ -69,7 +69,7 @@
             // btn_Book
             // 
             this.btn_Book.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Book.Location = new System.Drawing.Point(366, 21);
+            this.btn_Book.Location = new System.Drawing.Point(375, 34);
             this.btn_Book.Name = "btn_Book";
             this.btn_Book.Size = new System.Drawing.Size(98, 32);
             this.btn_Book.TabIndex = 9;
@@ -88,7 +88,7 @@
             this.Controls.Add(this.lb_Description);
             this.Controls.Add(this.lb_RName);
             this.Name = "Uc_Rooms";
-            this.Size = new System.Drawing.Size(486, 74);
+            this.Size = new System.Drawing.Size(486, 90);
             this.ResumeLayout(false);
             this.PerformLayout();
 
