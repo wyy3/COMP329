@@ -20,7 +20,7 @@ namespace COMP329_Milestone3
         
         private void MainForm_Load(object sender, EventArgs e)
         {
-            string cmd = "SELECT AID,AName,street,city,region,description,phone,email FROM ACCOMMODATION a INNER JOIN Company c on a.COMPANYID = c.COMPANYID";
+            string cmd = "SELECT AID,AName,street,city,region,description,phone,email FROM ACCOMMODATION a INNER JOIN Company c on a.COMPANYID = c.COMPANYID WHERE a.AID IN (SELECT r.AccommodationID FROM Room r)";
             LoadUserControls(cmd);
         }
 
@@ -29,7 +29,7 @@ namespace COMP329_Milestone3
             string city = tb_CityName.Text.Trim();
             pn_Container.Controls.Clear();
 
-            string cmd = "SELECT AID,AName,street,city,region,description,phone,email FROM ACCOMMODATION a INNER JOIN Company c on a.COMPANYID = c.COMPANYID WHERE a.CITY = '" + city + "'"; ;
+            string cmd = "SELECT AID,AName,street,city,region,description,phone,email FROM ACCOMMODATION a INNER JOIN Company c on a.COMPANYID = c.COMPANYID WHERE a.CITY = '" + city + "' AND a.AID IN (SELECT r.AccommodationID FROM Room r)";
             LoadUserControls(cmd);
         }
 
