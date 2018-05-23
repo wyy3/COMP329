@@ -30,6 +30,7 @@ namespace COMP329_Milestone3
         {
             var booking = new Booking();
             booking.AID = data.AID;
+            booking.AName = data.AName;
             booking.RoomTypeID = data.RoomTypeID;
             booking.RName = data.RName;
             booking.Price = data.Price;

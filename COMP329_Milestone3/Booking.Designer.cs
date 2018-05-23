@@ -39,7 +39,7 @@
             this.tb_LastName = new System.Windows.Forms.TextBox();
             this.tb_PhoneNo = new System.Windows.Forms.TextBox();
             this.tb_Email = new System.Windows.Forms.TextBox();
-            this.btn_Back = new System.Windows.Forms.Button();
+            this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Book = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lb_CheckInDate = new System.Windows.Forms.Label();
@@ -153,16 +153,16 @@
             this.tb_Email.TabIndex = 13;
             this.tb_Email.Text = "test@gmail.com";
             // 
-            // btn_Back
+            // btn_Cancel
             // 
-            this.btn_Back.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Back.Location = new System.Drawing.Point(343, 379);
-            this.btn_Back.Name = "btn_Back";
-            this.btn_Back.Size = new System.Drawing.Size(93, 28);
-            this.btn_Back.TabIndex = 14;
-            this.btn_Back.Text = "Back";
-            this.btn_Back.UseVisualStyleBackColor = true;
-            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
+            this.btn_Cancel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancel.Location = new System.Drawing.Point(343, 379);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(93, 28);
+            this.btn_Cancel.TabIndex = 14;
+            this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // btn_Book
             // 
@@ -225,7 +225,7 @@
             this.Controls.Add(this.lb_CheckInDate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Book);
-            this.Controls.Add(this.btn_Back);
+            this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.tb_Email);
             this.Controls.Add(this.tb_PhoneNo);
             this.Controls.Add(this.tb_LastName);
@@ -258,7 +258,7 @@
         private System.Windows.Forms.TextBox tb_LastName;
         private System.Windows.Forms.TextBox tb_PhoneNo;
         private System.Windows.Forms.TextBox tb_Email;
-        private System.Windows.Forms.Button btn_Back;
+        private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_Book;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb_CheckInDate;

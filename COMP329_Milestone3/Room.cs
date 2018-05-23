@@ -16,5 +16,6 @@ namespace COMP329_Milestone3
         public decimal AID { get; set; }
 
         public string CheckInDate { get; set; }
+        public string AName { get; set; }
     }
 }

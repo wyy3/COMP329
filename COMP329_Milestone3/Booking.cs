@@ -19,6 +19,7 @@ namespace COMP329_Milestone3
         }
 
         public decimal AID { get; set; }
+        public string AName { get; set; }
         public decimal RoomTypeID { get; set; }
         public string RName { get; set; }
         public float Price { get; set; }
@@ -32,20 +33,16 @@ namespace COMP329_Milestone3
 
             //??????????????????????
             //GET ACCOMMODATION NAME
-            OracleConnection myConnection = Db.Connection();
-            myConnection.Open();
-            OracleCommand myCommand = myConnection.CreateCommand();
-            myCommand.CommandText = "SELECT AName FROM Accommodation WHERE AID =" + AID;
-            OracleDataReader reader = myCommand.ExecuteReader();
-            reader.Read();
-            lb_AName.Text = (string)reader["ANAME"];
-            reader.Close();
-            myConnection.Close();
-        }
-
-        private void btn_Back_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            lb_AName.Text = AName;
+            //OracleConnection myConnection = Db.Connection();
+            //myConnection.Open();
+            //OracleCommand myCommand = myConnection.CreateCommand();
+            //myCommand.CommandText = "SELECT AName FROM Accommodation WHERE AID =" + AID;
+            //OracleDataReader reader = myCommand.ExecuteReader();
+            //reader.Read();
+            //lb_AName.Text = (string)reader["ANAME"];
+            //reader.Close();
+            //myConnection.Close();
         }
 
         private void btn_Book_Click(object sender, EventArgs e)
@@ -67,7 +64,7 @@ namespace COMP329_Milestone3
             myCommand.CommandText = "SELECT CUSTOMERID FROM CUSTOMER WHERE EMAIL = '" + email + "'";
             OracleDataReader reader = myCommand.ExecuteReader();
             //reader.Read();
-            if(reader.HasRows)
+            if (reader.HasRows)
             {
                 //has user
                 reader.Read();
@@ -77,21 +74,33 @@ namespace COMP329_Milestone3
             else
             {
                 //new user, insert customer
-                myCommand.CommandText = "INSERT INTO Customer (CustomerID,CFName,CLName,DoB,phone,email) VALUES (11,'"+fname+"','"+lname+"','"+dob+"','"+phone+"','"+email+"')";
+                myCommand.CommandText = "INSERT INTO Customer (CFName,CLName,DoB,phone,email) VALUES ('" + fname + "','" + lname + "','" + dob + "','" + phone + "','" + email + "')";
                 rowUpdated = myCommand.ExecuteNonQuery();
-                if(rowUpdated == 0)
-                    MessageBox.Show("Customer not inserted","Failed",MessageBoxButtons.OK);
+                if (rowUpdated == 0)
+                    MessageBox.Show("Customer not inserted", "Failed", MessageBoxButtons.OK);
                 else
-                    CID = 11;
+                {
+                    //get inserted id
+                    myCommand.CommandText = "SELECT CUSTOMERID FROM CUSTOMER WHERE EMAIL = '" + email + "'";
+                    reader = myCommand.ExecuteReader();
+                    reader.Read();
+                    CID = (decimal)reader["CUSTOMERID"];
+                    reader.Close();
+                }
             }
             //insert booking
-            myCommand.CommandText = "INSERT INTO BOOKING (BookingID,price,CheckInDate,RoomTypeID,CustomerID) VALUES (13,"+ Price + ",'" +dob + "'," + RoomTypeID + "," + CID + ")";
+            myCommand.CommandText = "INSERT INTO BOOKING (BookingID,price,CheckInDate,RoomTypeID,CustomerID) VALUES (13," + Price + ",'" + dob + "'," + RoomTypeID + "," + CID + ")";
             rowUpdated = myCommand.ExecuteNonQuery();
             if (rowUpdated == 0)
                 MessageBox.Show("Booking Failed", "Failed", MessageBoxButtons.OK);
             else
                 MessageBox.Show("Thank you for booking with us!", "Successed", MessageBoxButtons.OK);
 
+            this.Close();
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }
