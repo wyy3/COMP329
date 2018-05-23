@@ -30,19 +30,8 @@ namespace COMP329_Milestone3
             lb_RName.Text = RName;
             lb_Price.Text = "NZ $" + Price;
             lb_CheckInDate.Text = CheckInDate;
-
-            //??????????????????????
-            //GET ACCOMMODATION NAME
+            
             lb_AName.Text = AName;
-            //OracleConnection myConnection = Db.Connection();
-            //myConnection.Open();
-            //OracleCommand myCommand = myConnection.CreateCommand();
-            //myCommand.CommandText = "SELECT AName FROM Accommodation WHERE AID =" + AID;
-            //OracleDataReader reader = myCommand.ExecuteReader();
-            //reader.Read();
-            //lb_AName.Text = (string)reader["ANAME"];
-            //reader.Close();
-            //myConnection.Close();
         }
 
         private void btn_Book_Click(object sender, EventArgs e)
@@ -63,7 +52,7 @@ namespace COMP329_Milestone3
             //check if has customer
             myCommand.CommandText = "SELECT CUSTOMERID FROM CUSTOMER WHERE EMAIL = '" + email + "'";
             OracleDataReader reader = myCommand.ExecuteReader();
-            //reader.Read();
+
             if (reader.HasRows)
             {
                 //has user
