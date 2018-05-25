@@ -33,6 +33,10 @@
             this.btn_Search = new System.Windows.Forms.Button();
             this.pn_Search = new System.Windows.Forms.Panel();
             this.pn_Container = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.llb_SignIn = new System.Windows.Forms.LinkLabel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.llb_Register = new System.Windows.Forms.LinkLabel();
             this.pn_Search.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,9 +74,9 @@
             this.pn_Search.Controls.Add(this.btn_Search);
             this.pn_Search.Controls.Add(this.label1);
             this.pn_Search.Controls.Add(this.tb_CityName);
-            this.pn_Search.Location = new System.Drawing.Point(52, 12);
+            this.pn_Search.Location = new System.Drawing.Point(47, 51);
             this.pn_Search.Name = "pn_Search";
-            this.pn_Search.Size = new System.Drawing.Size(573, 56);
+            this.pn_Search.Size = new System.Drawing.Size(573, 47);
             this.pn_Search.TabIndex = 3;
             // 
             // pn_Container
@@ -83,6 +87,49 @@
             this.pn_Container.Size = new System.Drawing.Size(627, 319);
             this.pn_Container.TabIndex = 4;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(383, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 23);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Operator:";
+            // 
+            // llb_SignIn
+            // 
+            this.llb_SignIn.AutoSize = true;
+            this.llb_SignIn.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llb_SignIn.Location = new System.Drawing.Point(475, 25);
+            this.llb_SignIn.Name = "llb_SignIn";
+            this.llb_SignIn.Size = new System.Drawing.Size(60, 23);
+            this.llb_SignIn.TabIndex = 5;
+            this.llb_SignIn.TabStop = true;
+            this.llb_SignIn.Text = "Sign in";
+            this.llb_SignIn.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llb_SignIn_LinkClicked);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(541, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(17, 23);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "/";
+            // 
+            // llb_Register
+            // 
+            this.llb_Register.AutoSize = true;
+            this.llb_Register.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llb_Register.Location = new System.Drawing.Point(564, 25);
+            this.llb_Register.Name = "llb_Register";
+            this.llb_Register.Size = new System.Drawing.Size(72, 23);
+            this.llb_Register.TabIndex = 7;
+            this.llb_Register.TabStop = true;
+            this.llb_Register.Text = "Register";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,6 +137,10 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(674, 448);
+            this.Controls.Add(this.llb_Register);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.llb_SignIn);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pn_Container);
             this.Controls.Add(this.pn_Search);
             this.Name = "MainForm";
@@ -98,6 +149,7 @@
             this.pn_Search.ResumeLayout(false);
             this.pn_Search.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -108,6 +160,10 @@
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Panel pn_Search;
         private System.Windows.Forms.Panel pn_Container;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.LinkLabel llb_SignIn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.LinkLabel llb_Register;
     }
 }
 

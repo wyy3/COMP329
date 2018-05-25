@@ -54,6 +54,12 @@
     <Compile Include="Booking.Designer.cs">
       <DependentUpon>Booking.cs</DependentUpon>
     </Compile>
+    <Compile Include="CompanySignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompanySignIn.Designer.cs">
+      <DependentUpon>CompanySignIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Db.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -70,6 +76,7 @@
     <Compile Include="Rooms.Designer.cs">
       <DependentUpon>Rooms.cs</DependentUpon>
     </Compile>
+    <Compile Include="Singleton.cs" />
     <Compile Include="Uc_Accommodations.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,6 +91,9 @@
     </Compile>
     <EmbeddedResource Include="Booking.resx">
       <DependentUpon>Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompanySignIn.resx">
+      <DependentUpon>CompanySignIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

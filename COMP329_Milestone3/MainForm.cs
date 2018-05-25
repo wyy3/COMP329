@@ -67,5 +67,13 @@ namespace COMP329_Milestone3
             reader.Close();
             myConnection.Close();
         }
+
+        private void llb_SignIn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Hide();
+            CompanySignIn form = new CompanySignIn();
+            form.ShowDialog();
+            Close();
+        }
     }
 }
