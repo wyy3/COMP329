@@ -22,7 +22,7 @@ namespace COMP329_Milestone3
         public string AName { get; set; }
         public decimal RoomTypeID { get; set; }
         public string RName { get; set; }
-        public float Price { get; set; }
+        public decimal Price { get; set; }
         public string CheckInDate { get; set; }
 
         private void Booking_Load(object sender, EventArgs e)

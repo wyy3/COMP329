@@ -48,7 +48,7 @@ namespace COMP329_Milestone3
             {
                 Room data = new Room();
                 data.RoomTypeID = (decimal)reader["RoomTypeID"];
-                data.Price = (float)reader["Price"];
+                data.Price = (decimal)reader["Price"];
                 data.Description = (string)reader["Description"];
                 data.Quantity = (decimal)reader["Quantity"];    //maybe dont need this?
                 data.RName = (string)reader["RName"];
