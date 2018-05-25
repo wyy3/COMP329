@@ -1,4 +1,4 @@
-﻿using Oracle.DataAccess.Client;
+﻿using System.Data.OracleClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

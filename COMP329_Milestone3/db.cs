@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Oracle.DataAccess.Client;
+using System.Data.OracleClient;
 
 namespace COMP329_Milestone3
 {
@@ -14,6 +14,5 @@ namespace COMP329_Milestone3
             var ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["COMP329"].ConnectionString;
             return new OracleConnection(ConnectionString);
         }
-
     }
 }
