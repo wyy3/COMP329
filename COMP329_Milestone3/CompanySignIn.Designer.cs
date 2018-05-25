@@ -58,6 +58,7 @@
             this.btn_Register.TabIndex = 20;
             this.btn_Register.Text = "Register";
             this.btn_Register.UseVisualStyleBackColor = true;
+            this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 
             // tb_Email
             // 
@@ -66,7 +67,7 @@
             this.tb_Email.Name = "tb_Email";
             this.tb_Email.Size = new System.Drawing.Size(323, 27);
             this.tb_Email.TabIndex = 19;
-            this.tb_Email.Text = "test@gmail.com";
+            this.tb_Email.Text = "angelworth@gmail.com";
             // 
             // tb_Password
             // 
@@ -76,7 +77,7 @@
             this.tb_Password.PasswordChar = '*';
             this.tb_Password.Size = new System.Drawing.Size(323, 27);
             this.tb_Password.TabIndex = 18;
-            this.tb_Password.Text = "0220708002";
+            this.tb_Password.Text = "Angelworth";
             // 
             // lb_Email
             // 

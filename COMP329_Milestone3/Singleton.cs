@@ -12,10 +12,10 @@ namespace COMP329_Milestone3
 
         public static Singleton Instance { get; } = new Singleton();
         
-        private int CID;
+        private decimal CID;
         private string CName;
 
-        public int GetCompanyID()
+        public decimal GetCompanyID()
         {
             return CID;
         }
@@ -25,7 +25,7 @@ namespace COMP329_Milestone3
             return CName;
         }
 
-        public void CompanyInfo(int CompanyID, string CompanyName)
+        public void CompanyInfo(decimal CompanyID, string CompanyName)
         {
             CID = CompanyID;
             CName = CompanyName;

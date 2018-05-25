@@ -54,6 +54,18 @@
     <Compile Include="Booking.Designer.cs">
       <DependentUpon>Booking.cs</DependentUpon>
     </Compile>
+    <Compile Include="Company.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company.Designer.cs">
+      <DependentUpon>Company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompanyRegister.Designer.cs">
+      <DependentUpon>CompanyRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="CompanySignIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +103,12 @@
     </Compile>
     <EmbeddedResource Include="Booking.resx">
       <DependentUpon>Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company.resx">
+      <DependentUpon>Company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompanyRegister.resx">
+      <DependentUpon>CompanyRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CompanySignIn.resx">
       <DependentUpon>CompanySignIn.cs</DependentUpon>

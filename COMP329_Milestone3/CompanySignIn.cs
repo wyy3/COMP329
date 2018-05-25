@@ -34,11 +34,16 @@ namespace COMP329_Milestone3
             OracleConnection myConnection = Db.Connection();
             myConnection.Open();
             OracleCommand myCommand = myConnection.CreateCommand();
-            myCommand.CommandText = "SELECT CompanyID FROM Company WHERE Email ='" + email + "' AND Password ='" + password + "'";
+            myCommand.CommandText = "SELECT CompanyID, CName FROM Company WHERE Email ='" + email + "' AND Password ='" + password + "'";
             OracleDataReader reader = myCommand.ExecuteReader();
             if(reader.HasRows)
             {
                 //has user
+                reader.Read();
+                decimal CID = (decimal)reader["CompanyID"];
+                string CName = (string)reader["CName"];
+                Singleton user = Singleton.Instance;
+                user.CompanyInfo(CID,CName);
                 Company form = new Company();
                 Hide();
                 form.ShowDialog();
@@ -50,6 +55,14 @@ namespace COMP329_Milestone3
                 tb_Email.Clear();
                 tb_Password.Clear();
             }
+        }
+
+        private void btn_Register_Click(object sender, EventArgs e)
+        {
+            Hide();
+            CompanyRegister form = new CompanyRegister();
+            form.ShowDialog();
+            Close();
         }
     }
 }

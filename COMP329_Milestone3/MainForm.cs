@@ -75,5 +75,13 @@ namespace COMP329_Milestone3
             form.ShowDialog();
             Close();
         }
+
+        private void llb_Register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Hide();
+            CompanyRegister form = new CompanyRegister();
+            form.ShowDialog();
+            Close();
+        }
     }
 }
