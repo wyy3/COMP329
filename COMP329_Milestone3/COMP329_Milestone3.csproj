@@ -60,6 +60,36 @@
     <Compile Include="Company.Designer.cs">
       <DependentUpon>Company.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditAccommodation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAccommodation.Designer.cs">
+      <DependentUpon>EditAccommodation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRoom.Designer.cs">
+      <DependentUpon>EditRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewRoom.Designer.cs">
+      <DependentUpon>NewRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRooms.Designer.cs">
+      <DependentUpon>ViewRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewAccommodation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewAccommodation.Designer.cs">
+      <DependentUpon>NewAccommodation.cs</DependentUpon>
+    </Compile>
     <Compile Include="CompanyRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +136,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Company.resx">
       <DependentUpon>Company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAccommodation.resx">
+      <DependentUpon>EditAccommodation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditRoom.resx">
+      <DependentUpon>EditRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewRoom.resx">
+      <DependentUpon>NewRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRooms.resx">
+      <DependentUpon>ViewRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewAccommodation.resx">
+      <DependentUpon>NewAccommodation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CompanyRegister.resx">
       <DependentUpon>CompanyRegister.cs</DependentUpon>
