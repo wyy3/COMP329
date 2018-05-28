@@ -31,8 +31,8 @@ namespace COMP329_Milestone3
         {
             pn_Container.Controls.Clear();
 
-            string date = dtp_CheckInDate.Value.ToString("dd/MM/yyyy");
-
+            //string date = dtp_CheckInDate.Value.ToString("dd/MM/yyyy");
+            string date = string.Format("{0:dd-MMM-yyyy}", dtp_CheckInDate.Value);
             OracleConnection myConnection = Db.Connection();
             myConnection.Open();
             OracleCommand myCommand = myConnection.CreateCommand();

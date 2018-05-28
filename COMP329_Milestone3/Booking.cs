@@ -38,7 +38,7 @@ namespace COMP329_Milestone3
         {
             string fname = tb_FirstName.Text.Trim();
             string lname = tb_LastName.Text.Trim();
-            string dob = dtp_DoB.Value.ToString("dd/MM/yyyy");
+            string dob = string.Format("{0:dd-MMM-yyyy}", dtp_DoB.Value);
             string phone = tb_PhoneNo.Text.Trim();
             string email = tb_Email.Text.Trim();
 
@@ -63,22 +63,22 @@ namespace COMP329_Milestone3
             else
             {
                 //new user, insert customer
-                myCommand.CommandText = "INSERT INTO Customer (CFName,CLName,DoB,phone,email) VALUES ('" + fname + "','" + lname + "','" + dob + "','" + phone + "','" + email + "')";
+                myCommand.CommandText = "INSERT INTO Customer (CustomerID,CFName,CLName,DoB,phone,email) VALUES (customerID.nextval,'" + fname + "','" + lname + "','" + dob + "','" + phone + "','" + email + "')";
                 rowUpdated = myCommand.ExecuteNonQuery();
                 if (rowUpdated == 0)
                     MessageBox.Show("Customer not inserted", "Failed", MessageBoxButtons.OK);
                 else
                 {
                     //get inserted id
-                    myCommand.CommandText = "SELECT CUSTOMERID FROM CUSTOMER WHERE EMAIL = '" + email + "'";
+                    myCommand.CommandText = "SELECT CUSTOMERID.currval FROM DUAL";
                     reader = myCommand.ExecuteReader();
                     reader.Read();
-                    CID = (decimal)reader["CUSTOMERID"];
+                    CID = (decimal)reader["currval"];
                     reader.Close();
                 }
             }
             //insert booking
-            myCommand.CommandText = "INSERT INTO BOOKING (BookingID,price,CheckInDate,RoomTypeID,CustomerID) VALUES (13," + Price + ",'" + dob + "'," + RoomTypeID + "," + CID + ")";
+            myCommand.CommandText = "INSERT INTO BOOKING (BookingID,price,CheckInDate,RoomTypeID,CustomerID) VALUES (BookingID.nextval," + Price + ",'" + CheckInDate + "'," + RoomTypeID + "," + CID + ")";
             rowUpdated = myCommand.ExecuteNonQuery();
             if (rowUpdated == 0)
                 MessageBox.Show("Booking Failed", "Failed", MessageBoxButtons.OK);
