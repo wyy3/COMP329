@@ -40,7 +40,7 @@
             this.lb_PhoneNo = new System.Windows.Forms.Label();
             this.lb_DoB = new System.Windows.Forms.Label();
             this.lb_LastName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lb_RName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tb_Quantity
@@ -60,6 +60,7 @@
             this.btn_Save.TabIndex = 59;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Cancel
             // 
@@ -70,6 +71,7 @@
             this.btn_Cancel.TabIndex = 58;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // tb_Description
             // 
@@ -155,15 +157,15 @@
             this.lb_LastName.TabIndex = 49;
             this.lb_LastName.Text = "Name:";
             // 
-            // label2
+            // lb_RName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(53, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 33);
-            this.label2.TabIndex = 48;
-            this.label2.Text = "Room Name";
+            this.lb_RName.AutoSize = true;
+            this.lb_RName.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_RName.Location = new System.Drawing.Point(53, 71);
+            this.lb_RName.Name = "lb_RName";
+            this.lb_RName.Size = new System.Drawing.Size(150, 33);
+            this.lb_RName.TabIndex = 48;
+            this.lb_RName.Text = "Room Name";
             // 
             // EditRoom
             // 
@@ -183,9 +185,10 @@
             this.Controls.Add(this.lb_PhoneNo);
             this.Controls.Add(this.lb_DoB);
             this.Controls.Add(this.lb_LastName);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lb_RName);
             this.Name = "EditRoom";
             this.Text = "Company Register";
+            this.Load += new System.EventHandler(this.EditRoom_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,6 +208,6 @@
         private System.Windows.Forms.Label lb_PhoneNo;
         private System.Windows.Forms.Label lb_DoB;
         private System.Windows.Forms.Label lb_LastName;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lb_RName;
     }
 }
