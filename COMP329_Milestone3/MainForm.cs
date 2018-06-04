@@ -27,6 +27,11 @@ namespace COMP329_Milestone3
         private void btn_Search_Click(object sender, EventArgs e)
         {
             string city = tb_CityName.Text.Trim();
+            if (string.IsNullOrEmpty(city))
+            {
+                MessageBox.Show("Invalid City Name!", "Invalid", MessageBoxButtons.OK);
+                return;
+            }
             pn_Container.Controls.Clear();
             string cmd = "";
             if (city.ToLower() == "all")
