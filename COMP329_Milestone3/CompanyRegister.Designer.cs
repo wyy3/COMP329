@@ -58,7 +58,7 @@
             this.btn_Signin.Location = new System.Drawing.Point(349, 341);
             this.btn_Signin.Name = "btn_Signin";
             this.btn_Signin.Size = new System.Drawing.Size(93, 28);
-            this.btn_Signin.TabIndex = 29;
+            this.btn_Signin.TabIndex = 6;
             this.btn_Signin.Text = "Sign in";
             this.btn_Signin.UseVisualStyleBackColor = true;
             this.btn_Signin.Click += new System.EventHandler(this.btn_Signin_Click);
@@ -69,7 +69,7 @@
             this.btn_Register.Location = new System.Drawing.Point(481, 341);
             this.btn_Register.Name = "btn_Register";
             this.btn_Register.Size = new System.Drawing.Size(93, 28);
-            this.btn_Register.TabIndex = 28;
+            this.btn_Register.TabIndex = 5;
             this.btn_Register.Text = "Register";
             this.btn_Register.UseVisualStyleBackColor = true;
             this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
@@ -80,7 +80,7 @@
             this.tb_Email.Location = new System.Drawing.Point(251, 237);
             this.tb_Email.Name = "tb_Email";
             this.tb_Email.Size = new System.Drawing.Size(323, 27);
-            this.tb_Email.TabIndex = 27;
+            this.tb_Email.TabIndex = 3;
             this.tb_Email.Text = "test@gmail.com";
             // 
             // tb_Password
@@ -90,7 +90,7 @@
             this.tb_Password.Name = "tb_Password";
             this.tb_Password.PasswordChar = '*';
             this.tb_Password.Size = new System.Drawing.Size(323, 27);
-            this.tb_Password.TabIndex = 26;
+            this.tb_Password.TabIndex = 2;
             this.tb_Password.Text = "TestCompany";
             // 
             // lb_Email
@@ -119,7 +119,7 @@
             this.tb_CName.Location = new System.Drawing.Point(251, 171);
             this.tb_CName.Name = "tb_CName";
             this.tb_CName.Size = new System.Drawing.Size(323, 27);
-            this.tb_CName.TabIndex = 31;
+            this.tb_CName.TabIndex = 1;
             this.tb_CName.Text = "Test Company";
             // 
             // label1
@@ -138,7 +138,7 @@
             this.tb_PhoneNO.Location = new System.Drawing.Point(251, 270);
             this.tb_PhoneNO.Name = "tb_PhoneNO";
             this.tb_PhoneNO.Size = new System.Drawing.Size(323, 27);
-            this.tb_PhoneNO.TabIndex = 33;
+            this.tb_PhoneNO.TabIndex = 4;
             this.tb_PhoneNO.Text = "123456789";
             // 
             // label2
@@ -158,7 +158,7 @@
             this.llb_Back.Location = new System.Drawing.Point(523, 49);
             this.llb_Back.Name = "llb_Back";
             this.llb_Back.Size = new System.Drawing.Size(51, 23);
-            this.llb_Back.TabIndex = 34;
+            this.llb_Back.TabIndex = 7;
             this.llb_Back.TabStop = true;
             this.llb_Back.Text = "BACK";
             this.llb_Back.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llb_Back_LinkClicked);
