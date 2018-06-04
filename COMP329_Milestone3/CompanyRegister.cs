@@ -64,7 +64,19 @@ namespace COMP329_Milestone3
                 if (rowUpdated == 0)
                     MessageBox.Show("Registering new company failed", "Failed", MessageBoxButtons.OK);
                 else
+                {
                     MessageBox.Show("Thank you for registering your company with us!", "Success", MessageBoxButtons.OK);
+                    Singleton company = Singleton.Instance;
+                    myCommand.CommandText = "SELECT CompanyID FROM Company WHERE Email ='" + email + "' AND Password ='" + password + "' AND CName = '" + CName + "'";
+                    reader = myCommand.ExecuteReader();
+                    reader.Read();
+                    decimal CID = (decimal)reader["CompanyID"];
+                    company.CompanyInfo(CID, CName);
+                    Company companyForm = new Company();
+                    Hide();
+                    companyForm.ShowDialog();
+                    Close();
+                }
 
                 Hide();
                 MainForm form = new MainForm();
