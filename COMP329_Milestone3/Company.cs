@@ -29,5 +29,11 @@ namespace COMP329_Milestone3
             form.ShowDialog();
      
         }
+
+        private void btn_EditAccommodation_Click(object sender, EventArgs e)
+        {
+            EditAccommodation form = new EditAccommodation();
+            form.ShowDialog();
+        }
     }
 }
