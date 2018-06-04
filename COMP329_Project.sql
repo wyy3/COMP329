@@ -138,5 +138,3 @@ increment by 1;
 --Booking Table
 CREATE sequence bookingID start with 11
 increment by 1;
-
-
