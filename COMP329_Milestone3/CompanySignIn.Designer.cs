@@ -52,11 +52,11 @@
             // btn_Register
             // 
             this.btn_Register.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Register.Location = new System.Drawing.Point(334, 314);
+            this.btn_Register.Location = new System.Drawing.Point(302, 314);
             this.btn_Register.Name = "btn_Register";
-            this.btn_Register.Size = new System.Drawing.Size(93, 28);
+            this.btn_Register.Size = new System.Drawing.Size(125, 28);
             this.btn_Register.TabIndex = 20;
-            this.btn_Register.Text = "Register";
+            this.btn_Register.Text = "Register Page";
             this.btn_Register.UseVisualStyleBackColor = true;
             this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 

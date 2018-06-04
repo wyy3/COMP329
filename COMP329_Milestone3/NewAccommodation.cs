@@ -17,14 +17,7 @@ namespace COMP329_Milestone3
         {
             InitializeComponent();
         }
-
-        private void NewAccommodation_Load(object sender, EventArgs e)
-        {
-            Singleton company = Singleton.Instance;
-            decimal companyID = company.GetCompanyID();
-            
-        }
-
+        
         private void btn_Create_Click(object sender, EventArgs e)
         {
             Singleton company = Singleton.Instance;
@@ -49,7 +42,7 @@ namespace COMP329_Milestone3
             if (rowUpdated == 0)
                 MessageBox.Show("Adding a new Accommodation failed", "Failed", MessageBoxButtons.OK);
             else
-                MessageBox.Show("Thank you for adding a new accommodation with us!", "Success", MessageBoxButtons.OK);
+                MessageBox.Show("New accommodation added!", "Success", MessageBoxButtons.OK);
 
             Close();
 
