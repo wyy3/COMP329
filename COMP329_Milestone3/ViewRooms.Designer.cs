@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pn_Container = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lb_AName = new System.Windows.Forms.Label();
             this.btn_NewAccommodation = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_EditAccom = new System.Windows.Forms.Button();
@@ -43,15 +43,16 @@
             this.pn_Container.Size = new System.Drawing.Size(617, 313);
             this.pn_Container.TabIndex = 4;
             // 
-            // label1
+            // lb_AName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 33);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Accommodation Name";
+            this.lb_AName.AutoSize = true;
+            this.lb_AName.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_AName.Location = new System.Drawing.Point(25, 21);
+            this.lb_AName.Name = "lb_AName";
+            this.lb_AName.Size = new System.Drawing.Size(266, 33);
+            this.lb_AName.TabIndex = 1;
+            this.lb_AName.Text = "Accommodation Name";
+            this.lb_AName.UseMnemonic = false;
             // 
             // btn_NewAccommodation
             // 
@@ -91,7 +92,7 @@
             this.Controls.Add(this.btn_NewAccommodation);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pn_Container);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lb_AName);
             this.Name = "ViewRooms";
             this.Text = "Company Register";
             this.ResumeLayout(false);
@@ -101,7 +102,7 @@
 
         #endregion
         private System.Windows.Forms.Panel pn_Container;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_AName;
         private System.Windows.Forms.Button btn_NewAccommodation;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_EditAccom;

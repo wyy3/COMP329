@@ -40,7 +40,7 @@
             this.lb_DoB = new System.Windows.Forms.Label();
             this.lb_LastName = new System.Windows.Forms.Label();
             this.lb_FirstName = new System.Windows.Forms.Label();
-            this.lb_CName = new System.Windows.Forms.Label();
+            this.lb_AName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tb_City
@@ -153,15 +153,16 @@
             this.lb_FirstName.TabIndex = 38;
             this.lb_FirstName.Text = "Name:";
             // 
-            // lb_CName
+            // lb_AName
             // 
-            this.lb_CName.AutoSize = true;
-            this.lb_CName.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_CName.Location = new System.Drawing.Point(41, 59);
-            this.lb_CName.Name = "lb_CName";
-            this.lb_CName.Size = new System.Drawing.Size(266, 33);
-            this.lb_CName.TabIndex = 37;
-            this.lb_CName.Text = "Accommodation Name";
+            this.lb_AName.AutoSize = true;
+            this.lb_AName.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_AName.Location = new System.Drawing.Point(41, 59);
+            this.lb_AName.Name = "lb_AName";
+            this.lb_AName.Size = new System.Drawing.Size(266, 33);
+            this.lb_AName.TabIndex = 37;
+            this.lb_AName.Text = "Accommodation Name";
+            this.lb_AName.UseMnemonic = false;
             // 
             // EditAccommodation
             // 
@@ -181,9 +182,9 @@
             this.Controls.Add(this.lb_DoB);
             this.Controls.Add(this.lb_LastName);
             this.Controls.Add(this.lb_FirstName);
-            this.Controls.Add(this.lb_CName);
+            this.Controls.Add(this.lb_AName);
             this.Name = "EditAccommodation";
-            this.Text = "Company Register";
+            this.Text = "Edit Accommodation";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,6 +204,6 @@
         private System.Windows.Forms.Label lb_DoB;
         private System.Windows.Forms.Label lb_LastName;
         private System.Windows.Forms.Label lb_FirstName;
-        private System.Windows.Forms.Label lb_CName;
+        private System.Windows.Forms.Label lb_AName;
     }
 }

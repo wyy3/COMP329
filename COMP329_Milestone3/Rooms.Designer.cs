@@ -43,6 +43,7 @@
             this.lb_AName.Size = new System.Drawing.Size(266, 33);
             this.lb_AName.TabIndex = 0;
             this.lb_AName.Text = "Accommodation Name";
+            this.lb_AName.UseMnemonic = false;
             // 
             // label1
             // 
