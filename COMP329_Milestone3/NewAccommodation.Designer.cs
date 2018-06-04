@@ -205,7 +205,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "NewAccommodation";
             this.Text = "Company Register";
-            this.Load += new System.EventHandler(this.NewAccommodation_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
