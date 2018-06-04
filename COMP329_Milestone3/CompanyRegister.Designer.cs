@@ -61,6 +61,7 @@
             this.btn_Signin.TabIndex = 29;
             this.btn_Signin.Text = "Sign in";
             this.btn_Signin.UseVisualStyleBackColor = true;
+            this.btn_Signin.Click += new System.EventHandler(this.btn_Signin_Click);
             // 
             // btn_Register
             // 
@@ -71,6 +72,7 @@
             this.btn_Register.TabIndex = 28;
             this.btn_Register.Text = "Register";
             this.btn_Register.UseVisualStyleBackColor = true;
+            this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 
             // tb_Email
             // 
@@ -159,6 +161,7 @@
             this.llb_Back.TabIndex = 34;
             this.llb_Back.TabStop = true;
             this.llb_Back.Text = "BACK";
+            this.llb_Back.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llb_Back_LinkClicked);
             // 
             // CompanyRegister
             // 
