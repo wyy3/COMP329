@@ -41,75 +41,87 @@
             this.lb_LastName = new System.Windows.Forms.Label();
             this.lb_FirstName = new System.Windows.Forms.Label();
             this.lb_AName = new System.Windows.Forms.Label();
+            this.tb_AID = new System.Windows.Forms.TextBox();
+            this.lb_AID = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tb_City
             // 
             this.tb_City.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_City.Location = new System.Drawing.Point(246, 222);
+            this.tb_City.Location = new System.Drawing.Point(328, 273);
+            this.tb_City.Margin = new System.Windows.Forms.Padding(4);
             this.tb_City.Name = "tb_City";
-            this.tb_City.Size = new System.Drawing.Size(323, 27);
+            this.tb_City.Size = new System.Drawing.Size(429, 32);
             this.tb_City.TabIndex = 49;
             // 
             // btn_Save
             // 
             this.btn_Save.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.Location = new System.Drawing.Point(476, 362);
+            this.btn_Save.Location = new System.Drawing.Point(635, 446);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(93, 28);
+            this.btn_Save.Size = new System.Drawing.Size(124, 34);
             this.btn_Save.TabIndex = 48;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Cancel
             // 
             this.btn_Cancel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancel.Location = new System.Drawing.Point(336, 362);
+            this.btn_Cancel.Location = new System.Drawing.Point(448, 446);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(93, 28);
+            this.btn_Cancel.Size = new System.Drawing.Size(124, 34);
             this.btn_Cancel.TabIndex = 47;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // tb_Description
             // 
             this.tb_Description.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Description.Location = new System.Drawing.Point(246, 303);
+            this.tb_Description.Location = new System.Drawing.Point(328, 373);
+            this.tb_Description.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Description.Name = "tb_Description";
-            this.tb_Description.Size = new System.Drawing.Size(323, 27);
+            this.tb_Description.Size = new System.Drawing.Size(429, 32);
             this.tb_Description.TabIndex = 46;
             // 
             // tb_Region
             // 
             this.tb_Region.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Region.Location = new System.Drawing.Point(246, 261);
+            this.tb_Region.Location = new System.Drawing.Point(328, 321);
+            this.tb_Region.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Region.Name = "tb_Region";
-            this.tb_Region.Size = new System.Drawing.Size(323, 27);
+            this.tb_Region.Size = new System.Drawing.Size(429, 32);
             this.tb_Region.TabIndex = 45;
             // 
             // tb_Street
             // 
             this.tb_Street.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Street.Location = new System.Drawing.Point(246, 186);
+            this.tb_Street.Location = new System.Drawing.Point(328, 229);
+            this.tb_Street.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Street.Name = "tb_Street";
-            this.tb_Street.Size = new System.Drawing.Size(323, 27);
+            this.tb_Street.Size = new System.Drawing.Size(429, 32);
             this.tb_Street.TabIndex = 44;
             // 
             // tb_AName
             // 
             this.tb_AName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_AName.Location = new System.Drawing.Point(246, 148);
+            this.tb_AName.Location = new System.Drawing.Point(328, 182);
+            this.tb_AName.Margin = new System.Windows.Forms.Padding(4);
             this.tb_AName.Name = "tb_AName";
-            this.tb_AName.Size = new System.Drawing.Size(323, 27);
+            this.tb_AName.Size = new System.Drawing.Size(429, 32);
             this.tb_AName.TabIndex = 43;
             // 
             // lb_Email
             // 
             this.lb_Email.AutoSize = true;
             this.lb_Email.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Email.Location = new System.Drawing.Point(97, 303);
+            this.lb_Email.Location = new System.Drawing.Point(129, 373);
+            this.lb_Email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_Email.Name = "lb_Email";
-            this.lb_Email.Size = new System.Drawing.Size(104, 23);
+            this.lb_Email.Size = new System.Drawing.Size(131, 29);
             this.lb_Email.TabIndex = 42;
             this.lb_Email.Text = "Description:";
             // 
@@ -117,9 +129,10 @@
             // 
             this.lb_PhoneNo.AutoSize = true;
             this.lb_PhoneNo.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_PhoneNo.Location = new System.Drawing.Point(134, 261);
+            this.lb_PhoneNo.Location = new System.Drawing.Point(179, 321);
+            this.lb_PhoneNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_PhoneNo.Name = "lb_PhoneNo";
-            this.lb_PhoneNo.Size = new System.Drawing.Size(67, 23);
+            this.lb_PhoneNo.Size = new System.Drawing.Size(87, 29);
             this.lb_PhoneNo.TabIndex = 41;
             this.lb_PhoneNo.Text = "Region:";
             // 
@@ -127,9 +140,10 @@
             // 
             this.lb_DoB.AutoSize = true;
             this.lb_DoB.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_DoB.Location = new System.Drawing.Point(157, 222);
+            this.lb_DoB.Location = new System.Drawing.Point(209, 273);
+            this.lb_DoB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_DoB.Name = "lb_DoB";
-            this.lb_DoB.Size = new System.Drawing.Size(44, 23);
+            this.lb_DoB.Size = new System.Drawing.Size(57, 29);
             this.lb_DoB.TabIndex = 40;
             this.lb_DoB.Text = "City:";
             // 
@@ -137,9 +151,10 @@
             // 
             this.lb_LastName.AutoSize = true;
             this.lb_LastName.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_LastName.Location = new System.Drawing.Point(140, 186);
+            this.lb_LastName.Location = new System.Drawing.Point(187, 229);
+            this.lb_LastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_LastName.Name = "lb_LastName";
-            this.lb_LastName.Size = new System.Drawing.Size(61, 23);
+            this.lb_LastName.Size = new System.Drawing.Size(78, 29);
             this.lb_LastName.TabIndex = 39;
             this.lb_LastName.Text = "Street:";
             // 
@@ -147,9 +162,10 @@
             // 
             this.lb_FirstName.AutoSize = true;
             this.lb_FirstName.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_FirstName.Location = new System.Drawing.Point(141, 148);
+            this.lb_FirstName.Location = new System.Drawing.Point(188, 182);
+            this.lb_FirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_FirstName.Name = "lb_FirstName";
-            this.lb_FirstName.Size = new System.Drawing.Size(60, 23);
+            this.lb_FirstName.Size = new System.Drawing.Size(78, 29);
             this.lb_FirstName.TabIndex = 38;
             this.lb_FirstName.Text = "Name:";
             // 
@@ -157,19 +173,42 @@
             // 
             this.lb_AName.AutoSize = true;
             this.lb_AName.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_AName.Location = new System.Drawing.Point(41, 59);
+            this.lb_AName.Location = new System.Drawing.Point(55, 73);
+            this.lb_AName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_AName.Name = "lb_AName";
-            this.lb_AName.Size = new System.Drawing.Size(266, 33);
+            this.lb_AName.Size = new System.Drawing.Size(335, 41);
             this.lb_AName.TabIndex = 37;
             this.lb_AName.Text = "Accommodation Name";
             this.lb_AName.UseMnemonic = false;
             // 
+            // tb_AID
+            // 
+            this.tb_AID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_AID.Location = new System.Drawing.Point(328, 132);
+            this.tb_AID.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_AID.Name = "tb_AID";
+            this.tb_AID.Size = new System.Drawing.Size(429, 32);
+            this.tb_AID.TabIndex = 51;
+            // 
+            // lb_AID
+            // 
+            this.lb_AID.AutoSize = true;
+            this.lb_AID.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_AID.Location = new System.Drawing.Point(69, 131);
+            this.lb_AID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_AID.Name = "lb_AID";
+            this.lb_AID.Size = new System.Drawing.Size(197, 29);
+            this.lb_AID.TabIndex = 50;
+            this.lb_AID.Text = "Acommodation ID:";
+            // 
             // EditAccommodation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(674, 448);
+            this.ClientSize = new System.Drawing.Size(899, 551);
+            this.Controls.Add(this.tb_AID);
+            this.Controls.Add(this.lb_AID);
             this.Controls.Add(this.tb_City);
             this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.btn_Cancel);
@@ -183,6 +222,7 @@
             this.Controls.Add(this.lb_LastName);
             this.Controls.Add(this.lb_FirstName);
             this.Controls.Add(this.lb_AName);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EditAccommodation";
             this.Text = "Edit Accommodation";
             this.ResumeLayout(false);
@@ -205,5 +245,7 @@
         private System.Windows.Forms.Label lb_LastName;
         private System.Windows.Forms.Label lb_FirstName;
         private System.Windows.Forms.Label lb_AName;
+        private System.Windows.Forms.TextBox tb_AID;
+        private System.Windows.Forms.Label lb_AID;
     }
 }
