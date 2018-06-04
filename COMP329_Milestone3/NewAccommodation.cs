@@ -44,6 +44,7 @@ namespace COMP329_Milestone3
             else
                 MessageBox.Show("New accommodation added!", "Success", MessageBoxButtons.OK);
 
+            myConnection.Close();
             Close();
 
         }

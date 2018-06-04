@@ -17,21 +17,16 @@ namespace COMP329_Milestone3
         {
             InitializeComponent();
         }
-
-        public decimal AID { get; set; }
-        public string AName { get; set; }
-        public decimal RoomTypeID { get; set; }
-        public string RName { get; set; }
-        public decimal Price { get; set; }
-        public string CheckInDate { get; set; }
+        
+        public Room room { get; set; }
 
         private void Booking_Load(object sender, EventArgs e)
         {
-            lb_RName.Text = RName;
-            lb_Price.Text = "NZ $" + Price;
-            lb_CheckInDate.Text = CheckInDate;
+            lb_RName.Text = room.RName;
+            lb_Price.Text = "NZ $" + room.Price;
+            lb_CheckInDate.Text = room.CheckInDate;
             
-            lb_AName.Text = AName;
+            lb_AName.Text = room.AName;
         }
 
         private void btn_Book_Click(object sender, EventArgs e)
@@ -78,19 +73,20 @@ namespace COMP329_Milestone3
                 }
             }
             //insert booking
-            myCommand.CommandText = "INSERT INTO BOOKING (BookingID,price,CheckInDate,RoomTypeID,CustomerID) VALUES (BookingID.nextval," + Price + ",'" + CheckInDate + "'," + RoomTypeID + "," + CID + ")";
+            myCommand.CommandText = "INSERT INTO BOOKING (BookingID,price,CheckInDate,RoomTypeID,CustomerID) VALUES (BookingID.nextval," + room.Price + ",'" + room.CheckInDate + "'," + room.RoomTypeID + "," + CID + ")";
             rowUpdated = myCommand.ExecuteNonQuery();
             if (rowUpdated == 0)
                 MessageBox.Show("Booking Failed", "Failed", MessageBoxButtons.OK);
             else
                 MessageBox.Show("Thank you for booking with us!", "Successed", MessageBoxButtons.OK);
 
-            this.Close();
+            myConnection.Close();
+            Close();
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

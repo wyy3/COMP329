@@ -77,6 +77,7 @@ namespace COMP329_Milestone3
                     companyForm.ShowDialog();
                     Close();
                 }
+                myConnection.Close();
 
                 Hide();
                 MainForm form = new MainForm();

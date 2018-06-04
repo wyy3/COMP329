@@ -55,6 +55,8 @@ namespace COMP329_Milestone3
                 tb_Email.Clear();
                 tb_Password.Clear();
             }
+            reader.Close();
+            myConnection.Close();
         }
 
         private void btn_Register_Click(object sender, EventArgs e)

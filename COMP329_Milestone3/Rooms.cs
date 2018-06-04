@@ -30,8 +30,7 @@ namespace COMP329_Milestone3
         private void LoadRooms()
         {
             pn_Container.Controls.Clear();
-
-            //string date = dtp_CheckInDate.Value.ToString("dd/MM/yyyy");
+            
             string date = string.Format("{0:dd-MMM-yyyy}", dtp_CheckInDate.Value);
             OracleConnection myConnection = Db.Connection();
             myConnection.Open();
@@ -46,20 +45,24 @@ namespace COMP329_Milestone3
 
             while (reader.Read())
             {
-                Room data = new Room();
-                data.RoomTypeID = (decimal)reader["RoomTypeID"];
-                data.Price = (decimal)reader["Price"];
-                data.Description = (string)reader["Description"];
-                data.Quantity = (decimal)reader["Quantity"];    //maybe dont need this?
-                data.RName = (string)reader["RName"];
-                data.AID = (decimal)reader["AccommodationID"];
-                data.CheckInDate = date;
-                data.AName = AName;
+                Room data = new Room
+                {
+                    RoomTypeID = (decimal)reader["RoomTypeID"],
+                    Price = (decimal)reader["Price"],
+                    Description = (string)reader["Description"],
+					Quantity = (decimal)reader["Quantity"],
+                    RName = (string)reader["RName"],
+                    AID = (decimal)reader["AccommodationID"],
+                    CheckInDate = date,
+                    AName = AName
+                };
 
-                var myUserControl = new Uc_Rooms();
-                myUserControl.Top = top;
-                myUserControl.Left = 50;
-                myUserControl.data = data;
+                var myUserControl = new Uc_Rooms
+                {
+                    Top = top,
+                    Left = 50,
+                    data = data
+                };
 
                 myUserControl.DataBind();
 
