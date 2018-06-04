@@ -51,16 +51,12 @@ namespace COMP329_Milestone3
             else
                 MessageBox.Show("Thank you for adding a new accommodation with us!", "Success", MessageBoxButtons.OK);
 
-            Hide();
-
             Close();
 
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
-            Hide();
-
             Close();
         }
     }
