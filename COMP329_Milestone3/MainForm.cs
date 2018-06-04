@@ -28,8 +28,14 @@ namespace COMP329_Milestone3
         {
             string city = tb_CityName.Text.Trim();
             pn_Container.Controls.Clear();
-
-            string cmd = "SELECT AID,AName,street,city,region,description,phone,email FROM ACCOMMODATION a INNER JOIN Company c on a.COMPANYID = c.COMPANYID WHERE a.CITY = '" + city + "' AND a.AID IN (SELECT r.AccommodationID FROM Room r)";
+            string cmd = "";
+            if (city.ToLower() == "all")
+                cmd = "SELECT AID,AName,street,city,region,description,phone,email FROM ACCOMMODATION a INNER JOIN Company c on a.COMPANYID = c.COMPANYID WHERE a.AID IN (SELECT r.AccommodationID FROM Room r)";
+            else
+            {
+                city = char.ToUpper(city[0]) + city.Substring(1);
+                cmd = "SELECT AID,AName,street,city,region,description,phone,email FROM ACCOMMODATION a INNER JOIN Company c on a.COMPANYID = c.COMPANYID WHERE a.CITY = '" + city + "' AND a.AID IN (SELECT r.AccommodationID FROM Room r)";
+            }
             LoadUserControls(cmd);
         }
 
