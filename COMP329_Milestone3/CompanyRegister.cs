@@ -66,23 +66,23 @@ namespace COMP329_Milestone3
                 else
                 {
                     MessageBox.Show("Thank you for registering your company with us!", "Success", MessageBoxButtons.OK);
-                    Singleton company = Singleton.Instance;
-                    myCommand.CommandText = "SELECT CompanyID FROM Company WHERE Email ='" + email + "' AND Password ='" + password + "' AND CName = '" + CName + "'";
+                    //get inserted CompanyID
+                    myCommand.CommandText = "SELECT CompanyID.currval FROM DUAL";
                     reader = myCommand.ExecuteReader();
                     reader.Read();
-                    decimal CID = (decimal)reader["CompanyID"];
+                    Singleton company = Singleton.Instance;
+                    decimal CID = (decimal)reader["currval"];
+                    //stores company info
                     company.CompanyInfo(CID, CName);
+
+                    reader.Close();
+                    myConnection.Close();
+
                     Company companyForm = new Company();
                     Hide();
                     companyForm.ShowDialog();
                     Close();
                 }
-                myConnection.Close();
-
-                Hide();
-                MainForm form = new MainForm();
-                form.ShowDialog();
-                Close();
             }
             
         }

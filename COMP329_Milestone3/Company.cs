@@ -24,7 +24,7 @@ namespace COMP329_Milestone3
             lb_CName.Text = company.GetCompanyName();
             decimal companyID = company.GetCompanyID();
 
-            string cmd = "SELECT AID,AName,street,city,region,description,phone,email FROM ACCOMMODATION a INNER JOIN Company c on a.COMPANYID = c.COMPANYID WHERE a.COMPANYID ='" + companyID + "'";
+            string cmd = "SELECT AID,AName,street,city,region,description,phone,email FROM ACCOMMODATION a INNER JOIN Company c on a.COMPANYID = c.COMPANYID WHERE a.COMPANYID =" + companyID;
             LoadUserControls(cmd);
         }
 
@@ -41,19 +41,22 @@ namespace COMP329_Milestone3
 
             while (reader.Read())
             {
-                Accommodation data = new Accommodation();
+                Accommodation data = new Accommodation
+                {
+                    AID = (decimal)reader["AID"],
+                    AName = reader["AName"].ToString(),
+                    Address = reader["STREET"].ToString() + ", " + reader["CITY"].ToString() + ", " + reader["REGION"].ToString(),
+                    Description = reader["DESCRIPTION"].ToString(),
+                    PhoneNo = reader["PHONE"].ToString(),
+                    Email = reader["EMAIL"].ToString()
+                };
 
-                data.AID = (decimal)reader["AID"];
-                data.AName = reader["AName"].ToString();
-                data.Address = reader["STREET"].ToString() + ", " + reader["CITY"].ToString() + ", " + reader["REGION"].ToString();
-                data.Description = reader["DESCRIPTION"].ToString();
-                data.PhoneNo = reader["PHONE"].ToString();
-                data.Email = reader["EMAIL"].ToString();
-
-                var myUserControl = new Uc_ViewAccommodations();
-                myUserControl.Top = top;
-                myUserControl.Left = 35;
-                myUserControl.data = data;
+                var myUserControl = new Uc_ViewAccommodations
+                {
+                    Top = top,
+                    Left = 35,
+                    data = data
+                };
 
                 myUserControl.DataBind();
 

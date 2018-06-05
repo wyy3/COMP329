@@ -22,9 +22,6 @@ namespace COMP329_Milestone3
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            Singleton company = Singleton.Instance;
-            decimal companyID = company.GetCompanyID();
-            
             string newName = tb_AName.Text.Trim();
             string street = tb_Street.Text.Trim();
             string city = tb_City.Text.Trim();
@@ -44,10 +41,9 @@ namespace COMP329_Milestone3
             if (rowUpdated == 0)
                 MessageBox.Show("Updating your accommodation failed", "Failed", MessageBoxButtons.OK);
             else
-            {
                 MessageBox.Show("Your accommodation details have now been updated!", "Success", MessageBoxButtons.OK);
-            }
-                
+
+            myConnection.Close();
             Close();
         }
 
@@ -58,31 +54,27 @@ namespace COMP329_Milestone3
 
         private void EditAccommodation_Load(object sender, EventArgs e)
         {
-            Singleton company = Singleton.Instance;
-            decimal companyID = company.GetCompanyID();
-
             OracleConnection myConnection = Db.Connection();
             myConnection.Open();
             OracleCommand myCommand = myConnection.CreateCommand();
             myCommand.CommandType = CommandType.Text;
-
             myCommand.CommandText = "SELECT ANAME, STREET, CITY, REGION, DESCRIPTION FROM ACCOMMODATION WHERE AID = " + AID;
             OracleDataReader reader = myCommand.ExecuteReader();
             reader.Read();
+
             string AName = (string)reader["ANAME"];
             string street = (string)reader["STREET"];
             string city = (string)reader["city"];
             string region = (string)reader["region"];
             string description = (string)reader["description"];
 
+            lb_AName.Text = AName;
             tb_AName.Text = AName;
             tb_Street.Text = street;
             tb_City.Text = city;
             tb_Region.Text = region;
             tb_Description.Text = description;
-
-            lb_AName.Text = AName;
-
+            
             reader.Close();
             myConnection.Close();
         }

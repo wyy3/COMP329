@@ -32,11 +32,11 @@ namespace COMP329_Milestone3
             pn_Container.Controls.Clear();
             
             string date = string.Format("{0:dd-MMM-yyyy}", dtp_CheckInDate.Value);
+
             OracleConnection myConnection = Db.Connection();
             myConnection.Open();
             OracleCommand myCommand = myConnection.CreateCommand();
-
-            //NEED TO TEST THIS QUERY!!!
+            
             myCommand.CommandText = "SELECT ROOMTYPEID, PRICE, DESCRIPTION, QUANTITY, RNAME, ACCOMMODATIONID FROM ROOM r WHERE r.ACCOMMODATIONID = " + AID +
                 " AND r.QUANTITY > coalesce ((SELECT COUNT(bc.ROOMTYPEID) FROM Booking bc WHERE bc.CHECKINDATE = '" + date + "' AND r.ROOMTYPEID = bc.ROOMTYPEID GROUP BY bc.ROOMTYPEID),0)";
             OracleDataReader reader = myCommand.ExecuteReader();

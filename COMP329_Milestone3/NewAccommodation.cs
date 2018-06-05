@@ -36,7 +36,7 @@ namespace COMP329_Milestone3
             OracleCommand myCommand = myConnection.CreateCommand();
             myCommand.CommandType = CommandType.Text;
 
-            myCommand.CommandText = "INSERT INTO ACCOMMODATION (AID,ANAME,STREET,CITY,REGION,DESCRIPTION,COMPANYID) VALUES (accommodationID.nextval,'" + AName + "','" + street + "','" + city + "','" + region + "','" + desc + "','" + companyID + "')";
+            myCommand.CommandText = "INSERT INTO ACCOMMODATION (AID,ANAME,STREET,CITY,REGION,DESCRIPTION,COMPANYID) VALUES (accommodationID.nextval,'" + AName + "','" + street + "','" + city + "','" + region + "','" + desc + "'," + companyID + ")";
             rowUpdated = myCommand.ExecuteNonQuery();
 
             if (rowUpdated == 0)

@@ -18,10 +18,7 @@ namespace COMP329_Milestone3
             InitializeComponent();
         }
 
-        public Accommodation data
-        {
-            get; set;
-        }
+        public Accommodation data { get; set; }
 
         public void DataBind()
         {
@@ -34,9 +31,11 @@ namespace COMP329_Milestone3
 
         private void btn_ViewDeal_Click(object sender, EventArgs e)
         {
-            var room = new Rooms();
-            room.AID = data.AID;
-            room.AName = data.AName;
+            var room = new Rooms
+            {
+                AID = data.AID,
+                AName = data.AName
+            };
             room.ShowDialog();            
         }
     }

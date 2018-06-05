@@ -42,8 +42,11 @@ namespace COMP329_Milestone3
                 reader.Read();
                 decimal CID = (decimal)reader["CompanyID"];
                 string CName = (string)reader["CName"];
+                
+                //stores company info
                 Singleton user = Singleton.Instance;
                 user.CompanyInfo(CID,CName);
+                
                 Company form = new Company();
                 Hide();
                 form.ShowDialog();
