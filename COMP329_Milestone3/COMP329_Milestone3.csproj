@@ -78,6 +78,12 @@
     <Compile Include="NewRoom.Designer.cs">
       <DependentUpon>NewRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uc_ViewAccommodations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc_ViewAccommodations.Designer.cs">
+      <DependentUpon>Uc_ViewAccommodations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uc_ViewRooms.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewRoom.resx">
       <DependentUpon>NewRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc_ViewAccommodations.resx">
+      <DependentUpon>Uc_ViewAccommodations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Uc_ViewRooms.resx">
       <DependentUpon>Uc_ViewRooms.cs</DependentUpon>
