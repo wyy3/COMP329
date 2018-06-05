@@ -82,7 +82,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lb_AName);
             this.Name = "Rooms";
-            this.Text = "Accommodation Name";
+            this.Text = "Rooms";
             this.Load += new System.EventHandler(this.Rooms_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -47,7 +47,7 @@ namespace COMP329_Milestone3
             price = Math.Round(price, 2);
             string des = tb_Description.Text.Trim();
 
-            OracleConnection myConnection = new OracleConnection();
+            OracleConnection myConnection = Db.Connection();
             myConnection.Open();
             OracleCommand myCommand = myConnection.CreateCommand();
             myCommand.CommandType = CommandType.Text;
@@ -60,6 +60,7 @@ namespace COMP329_Milestone3
                 MessageBox.Show("Room updated successfully!", "Successed", MessageBoxButtons.OK);
 
             myConnection.Close();
+            Close();
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
