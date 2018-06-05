@@ -31,7 +31,6 @@
             this.pn_Container = new System.Windows.Forms.Panel();
             this.lb_AName = new System.Windows.Forms.Label();
             this.btn_NewAccommodation = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btn_EditAccom = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -64,14 +63,6 @@
             this.btn_NewAccommodation.Text = "New Room";
             this.btn_NewAccommodation.UseVisualStyleBackColor = true;
             // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Location = new System.Drawing.Point(31, 83);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(617, 313);
-            this.panel1.TabIndex = 4;
-            // 
             // btn_EditAccom
             // 
             this.btn_EditAccom.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -91,7 +82,6 @@
             this.ClientSize = new System.Drawing.Size(674, 448);
             this.Controls.Add(this.btn_EditAccom);
             this.Controls.Add(this.btn_NewAccommodation);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pn_Container);
             this.Controls.Add(this.lb_AName);
             this.Name = "ViewRooms";
@@ -106,7 +96,6 @@
         private System.Windows.Forms.Panel pn_Container;
         private System.Windows.Forms.Label lb_AName;
         private System.Windows.Forms.Button btn_NewAccommodation;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_EditAccom;
     }
 }

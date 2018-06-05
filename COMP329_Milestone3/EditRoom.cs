@@ -24,6 +24,7 @@ namespace COMP329_Milestone3
         {
             lb_RName.Text = room.RName;
             tb_RName.Text = room.RName;
+            tb_Price.Text = room.Price.ToString();
             tb_Quantity.Text = room.Quantity.ToString();
             tb_Description.Text = room.Description;
         }

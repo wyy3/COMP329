@@ -63,9 +63,7 @@ namespace COMP329_Milestone3
             reader.Close();
             myConnection.Close();
         }
-
-
-
+        
         private void btn_NewAccommodation_Click(object sender, EventArgs e)
         {
             NewAccommodation form = new NewAccommodation();
