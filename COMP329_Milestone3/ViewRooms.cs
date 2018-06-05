@@ -38,30 +38,34 @@ namespace COMP329_Milestone3
             OracleDataReader reader = myCommand.ExecuteReader();
 
             int top = 10;
-
-            while (reader.Read())
+            if (reader.HasRows)
             {
-                Room data = new Room
+                while (reader.Read())
                 {
-                    RoomTypeID = (decimal)reader["RoomTypeID"],
-                    Price = (decimal)reader["Price"],
-                    Description = (string)reader["Description"],
-                    Quantity = (decimal)reader["Quantity"],
-                    RName = (string)reader["RName"]
-                };
+                    Room data = new Room
+                    {
+                        RoomTypeID = (decimal)reader["RoomTypeID"],
+                        Price = (decimal)reader["Price"],
+                        Description = (string)reader["Description"],
+                        Quantity = (decimal)reader["Quantity"],
+                        RName = (string)reader["RName"]
+                    };
 
-                var myUserControl = new Uc_ViewRooms
-                {
-                    Top = top,
-                    Left = 50,
-                    data = data
-                };
+                    var myUserControl = new Uc_ViewRooms
+                    {
+                        Top = top,
+                        Left = 50,
+                        data = data
+                    };
 
-                myUserControl.DataBind();
+                    myUserControl.DataBind();
 
-                top = top + myUserControl.Height + 30;
-                pn_Container.Controls.Add(myUserControl);
+                    top = top + myUserControl.Height + 30;
+                    pn_Container.Controls.Add(myUserControl);
+                }
             }
+            else
+                lb_NoRoom.Visible = true;
             reader.Close();
             myConnection.Close();
         }
