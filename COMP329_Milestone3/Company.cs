@@ -80,5 +80,16 @@ namespace COMP329_Milestone3
             form.ShowDialog();
         }
 
+        private void llb_SignOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //clear company info
+            Singleton company = Singleton.Instance;
+            company.CompanyInfo(-1, "");
+
+            MainForm form = new MainForm();
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
     }
 }

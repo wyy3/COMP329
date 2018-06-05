@@ -31,6 +31,7 @@
             this.lb_CName = new System.Windows.Forms.Label();
             this.pn_Container = new System.Windows.Forms.Panel();
             this.btn_NewAccommodation = new System.Windows.Forms.Button();
+            this.llb_SignOut = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lb_CName
@@ -62,12 +63,25 @@
             this.btn_NewAccommodation.UseVisualStyleBackColor = true;
             this.btn_NewAccommodation.Click += new System.EventHandler(this.btn_NewAccommodation_Click);
             // 
+            // llb_SignOut
+            // 
+            this.llb_SignOut.AutoSize = true;
+            this.llb_SignOut.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llb_SignOut.Location = new System.Drawing.Point(504, 24);
+            this.llb_SignOut.Name = "llb_SignOut";
+            this.llb_SignOut.Size = new System.Drawing.Size(72, 23);
+            this.llb_SignOut.TabIndex = 26;
+            this.llb_SignOut.TabStop = true;
+            this.llb_SignOut.Text = "Sign out";
+            this.llb_SignOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llb_SignOut_LinkClicked);
+            // 
             // Company
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(674, 448);
+            this.Controls.Add(this.llb_SignOut);
             this.Controls.Add(this.btn_NewAccommodation);
             this.Controls.Add(this.pn_Container);
             this.Controls.Add(this.lb_CName);
@@ -84,5 +98,6 @@
         private System.Windows.Forms.Label lb_CName;
         private System.Windows.Forms.Panel pn_Container;
         private System.Windows.Forms.Button btn_NewAccommodation;
+        private System.Windows.Forms.LinkLabel llb_SignOut;
     }
 }
