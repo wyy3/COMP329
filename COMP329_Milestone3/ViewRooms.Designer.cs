@@ -81,6 +81,7 @@
             this.btn_EditAccom.TabIndex = 27;
             this.btn_EditAccom.Text = "Edit Accommodation";
             this.btn_EditAccom.UseVisualStyleBackColor = true;
+            this.btn_EditAccom.Click += new System.EventHandler(this.btn_EditAccom_Click);
             // 
             // ViewRooms
             // 
@@ -95,6 +96,7 @@
             this.Controls.Add(this.lb_AName);
             this.Name = "ViewRooms";
             this.Text = "Company Register";
+            this.Load += new System.EventHandler(this.ViewRooms_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

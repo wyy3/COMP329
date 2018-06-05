@@ -16,5 +16,20 @@ namespace COMP329_Milestone3
         {
             InitializeComponent();
         }
+
+        public decimal AID { get; set; }
+        public string AName { get; set; }
+
+        private void btn_EditAccom_Click(object sender, EventArgs e)
+        {
+            EditAccommodation editAccommodation = new EditAccommodation();
+            editAccommodation.AID = AID;
+            editAccommodation.ShowDialog();
+        }
+
+        private void ViewRooms_Load(object sender, EventArgs e)
+        {
+            lb_AName.Text = AName;
+        }
     }
 }

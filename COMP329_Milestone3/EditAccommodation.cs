@@ -18,13 +18,14 @@ namespace COMP329_Milestone3
             InitializeComponent();
         }
 
+        public decimal AID { get; set; }
+
         private void btn_Save_Click(object sender, EventArgs e)
         {
             Singleton company = Singleton.Instance;
             decimal companyID = company.GetCompanyID();
-
-            string AID = tb_AID.Text.Trim();
-            string AName = tb_AName.Text.Trim();
+            
+            string newName = tb_AName.Text.Trim();
             string street = tb_Street.Text.Trim();
             string city = tb_City.Text.Trim();
             string region = tb_Region.Text.Trim();
@@ -36,37 +37,54 @@ namespace COMP329_Milestone3
             myConnection.Open();
             OracleCommand myCommand = myConnection.CreateCommand();
             myCommand.CommandType = CommandType.Text;
+            
+            myCommand.CommandText = "UPDATE ACCOMMODATION SET ANAME ='" + newName + "', STREET ='" + street + "', CITY ='" + city + "', REGION ='" + region + "', DESCRIPTION ='" + desc + "' WHERE AID =" + AID;
+            rowUpdated = myCommand.ExecuteNonQuery();
 
-
-            //check if a Accommodation already exists
-            myCommand.CommandText = "SELECT AID FROM ACCOMMODATION WHERE AID ='" + AID + "' AND COMPANYID = '" + companyID + "'";
-            OracleDataReader reader = myCommand.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                myCommand.CommandText = "UPDATE ACCOMMODATION SET ANAME ='" + AName + "', STREET ='" + street + "', CITY ='" + city + "', REGION ='" + region + "', DESCRIPTION ='" + desc + "' WHERE AID ='" + AID + "' AND COMPANYID ='" + companyID +  "'";
-                rowUpdated = myCommand.ExecuteNonQuery();
-
-                if (rowUpdated == 0)
-                    MessageBox.Show("Updating your accommodation failed", "Failed", MessageBoxButtons.OK);
-                else
-                {
-                    MessageBox.Show("Your accommodation details have now been updated!", "Success", MessageBoxButtons.OK);
-                }
-
-            }
+            if (rowUpdated == 0)
+                MessageBox.Show("Updating your accommodation failed", "Failed", MessageBoxButtons.OK);
             else
             {
-                reader.Close();
-                MessageBox.Show("Accommodation does not exist", "Failed", MessageBoxButtons.OK);
+                MessageBox.Show("Your accommodation details have now been updated!", "Success", MessageBoxButtons.OK);
             }
-
+                
             Close();
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void EditAccommodation_Load(object sender, EventArgs e)
+        {
+            Singleton company = Singleton.Instance;
+            decimal companyID = company.GetCompanyID();
+
+            OracleConnection myConnection = Db.Connection();
+            myConnection.Open();
+            OracleCommand myCommand = myConnection.CreateCommand();
+            myCommand.CommandType = CommandType.Text;
+
+            myCommand.CommandText = "SELECT ANAME, STREET, CITY, REGION, DESCRIPTION FROM ACCOMMODATION WHERE AID = " + AID;
+            OracleDataReader reader = myCommand.ExecuteReader();
+            reader.Read();
+            string AName = (string)reader["ANAME"];
+            string street = (string)reader["STREET"];
+            string city = (string)reader["city"];
+            string region = (string)reader["region"];
+            string description = (string)reader["description"];
+
+            tb_AName.Text = AName;
+            tb_Street.Text = street;
+            tb_City.Text = city;
+            tb_Region.Text = region;
+            tb_Description.Text = description;
+
+            lb_AName.Text = AName;
+
+            reader.Close();
+            myConnection.Close();
         }
     }
 }

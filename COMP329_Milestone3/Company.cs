@@ -50,7 +50,7 @@ namespace COMP329_Milestone3
                 data.PhoneNo = reader["PHONE"].ToString();
                 data.Email = reader["EMAIL"].ToString();
 
-                var myUserControl = new Uc_Accommodations();
+                var myUserControl = new Uc_ViewAccommodations();
                 myUserControl.Top = top;
                 myUserControl.Left = 35;
                 myUserControl.data = data;
