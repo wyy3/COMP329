@@ -42,6 +42,7 @@ namespace COMP329_Milestone3
             int top = 10;
             if (reader.HasRows)
             {
+                //has room
                 while (reader.Read())
                 {
                     if(!Loaded)
@@ -50,7 +51,7 @@ namespace COMP329_Milestone3
                         lb_AName.Text = AName;
                         Loaded = true;
                     }
-                    
+
                     Room data = new Room
                     {
                         RoomTypeID = (decimal)reader["RoomTypeID"],
@@ -75,8 +76,15 @@ namespace COMP329_Milestone3
                 }
             }
             else
-                lb_NoRoom.Visible = true;
+            {
+                myCommand.CommandText = "SELECT ANAME FROM ACCOMMODATION WHERE AID = " + AID;
+                reader = myCommand.ExecuteReader();
+                reader.Read();
+                lb_AName.Text = (string)reader["AName"];
+                Loaded = true;
 
+                lb_NoRoom.Visible = true;
+            }
             reader.Close();
             myConnection.Close();
         }
