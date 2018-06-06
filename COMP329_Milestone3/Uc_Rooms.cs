@@ -28,9 +28,11 @@ namespace COMP329_Milestone3
 
         private void btn_Book_Click(object sender, EventArgs e)
         {
+           ((Form)TopLevelControl).Hide();
             var booking = new Booking();
             booking.room = data;
             booking.ShowDialog();
+            ((Form)TopLevelControl).Close();
         }
     }
 }

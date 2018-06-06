@@ -28,9 +28,11 @@ namespace COMP329_Milestone3
 
         private void btn_EditRoom_Click(object sender, EventArgs e)
         {
+            ((Form)TopLevelControl).Hide();
             EditRoom editRoom = new EditRoom();
             editRoom.room = data;
             editRoom.ShowDialog();
+            ((Form)TopLevelControl).Close();
         }
     }
 }

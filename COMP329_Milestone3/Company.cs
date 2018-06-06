@@ -69,15 +69,10 @@ namespace COMP329_Milestone3
         
         private void btn_NewAccommodation_Click(object sender, EventArgs e)
         {
+            Hide();
             NewAccommodation form = new NewAccommodation();
             form.ShowDialog();
-     
-        }
-
-        private void btn_EditAccommodation_Click(object sender, EventArgs e)
-        {
-            EditAccommodation form = new EditAccommodation();
-            form.ShowDialog();
+            Close();
         }
 
         private void llb_SignOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

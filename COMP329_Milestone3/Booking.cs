@@ -81,11 +81,22 @@ namespace COMP329_Milestone3
                 MessageBox.Show("Thank you for booking with us!", "Successed", MessageBoxButtons.OK);
 
             myConnection.Close();
+
+            Hide();
+            Rooms form = new Rooms();
+            form.AID = room.AID;
+            form.AName = room.AName;
+            form.ShowDialog();
             Close();
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
+            Hide();
+            Rooms form = new Rooms();
+            form.AID = room.AID;
+            form.AName = room.AName;
+            form.ShowDialog();
             Close();
         }
     }

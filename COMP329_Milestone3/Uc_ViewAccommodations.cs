@@ -34,10 +34,12 @@ namespace COMP329_Milestone3
 
         private void btn_ViewRoom_Click(object sender, EventArgs e)
         {
+            ((Form)TopLevelControl).Hide();
             ViewRooms rooms = new ViewRooms();
             rooms.AID = data.AID;
             rooms.AName = data.AName;
             rooms.ShowDialog();
+            ((Form)TopLevelControl).Close();
         }
     }
 }

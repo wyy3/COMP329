@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.pn_Container = new System.Windows.Forms.Panel();
+            this.lb_NoRoom = new System.Windows.Forms.Label();
             this.lb_AName = new System.Windows.Forms.Label();
             this.btn_NewAccommodation = new System.Windows.Forms.Button();
             this.btn_EditAccom = new System.Windows.Forms.Button();
-            this.lb_NoRoom = new System.Windows.Forms.Label();
+            this.llb_Back = new System.Windows.Forms.LinkLabel();
             this.pn_Container.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +45,20 @@
             this.pn_Container.Name = "pn_Container";
             this.pn_Container.Size = new System.Drawing.Size(617, 313);
             this.pn_Container.TabIndex = 4;
+            // 
+            // lb_NoRoom
+            // 
+            this.lb_NoRoom.AutoSize = true;
+            this.lb_NoRoom.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_NoRoom.ForeColor = System.Drawing.Color.Red;
+            this.lb_NoRoom.Location = new System.Drawing.Point(192, 141);
+            this.lb_NoRoom.Name = "lb_NoRoom";
+            this.lb_NoRoom.Size = new System.Drawing.Size(243, 33);
+            this.lb_NoRoom.TabIndex = 28;
+            this.lb_NoRoom.Text = "No Room is Available";
+            this.lb_NoRoom.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.lb_NoRoom.UseMnemonic = false;
+            this.lb_NoRoom.Visible = false;
             // 
             // lb_AName
             // 
@@ -65,6 +80,7 @@
             this.btn_NewAccommodation.TabIndex = 26;
             this.btn_NewAccommodation.Text = "New Room";
             this.btn_NewAccommodation.UseVisualStyleBackColor = true;
+            this.btn_NewAccommodation.Click += new System.EventHandler(this.btn_NewAccommodation_Click);
             // 
             // btn_EditAccom
             // 
@@ -77,19 +93,17 @@
             this.btn_EditAccom.UseVisualStyleBackColor = true;
             this.btn_EditAccom.Click += new System.EventHandler(this.btn_EditAccom_Click);
             // 
-            // lb_NoRoom
+            // llb_Back
             // 
-            this.lb_NoRoom.AutoSize = true;
-            this.lb_NoRoom.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_NoRoom.ForeColor = System.Drawing.Color.Red;
-            this.lb_NoRoom.Location = new System.Drawing.Point(192, 141);
-            this.lb_NoRoom.Name = "lb_NoRoom";
-            this.lb_NoRoom.Size = new System.Drawing.Size(243, 33);
-            this.lb_NoRoom.TabIndex = 28;
-            this.lb_NoRoom.Text = "No Room is Available";
-            this.lb_NoRoom.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.lb_NoRoom.UseMnemonic = false;
-            this.lb_NoRoom.Visible = false;
+            this.llb_Back.AutoSize = true;
+            this.llb_Back.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llb_Back.Location = new System.Drawing.Point(560, 29);
+            this.llb_Back.Name = "llb_Back";
+            this.llb_Back.Size = new System.Drawing.Size(46, 23);
+            this.llb_Back.TabIndex = 28;
+            this.llb_Back.TabStop = true;
+            this.llb_Back.Text = "Back";
+            this.llb_Back.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llb_Back_LinkClicked);
             // 
             // ViewRooms
             // 
@@ -97,6 +111,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(674, 448);
+            this.Controls.Add(this.llb_Back);
             this.Controls.Add(this.btn_EditAccom);
             this.Controls.Add(this.btn_NewAccommodation);
             this.Controls.Add(this.pn_Container);
@@ -117,5 +132,6 @@
         private System.Windows.Forms.Button btn_NewAccommodation;
         private System.Windows.Forms.Button btn_EditAccom;
         private System.Windows.Forms.Label lb_NoRoom;
+        private System.Windows.Forms.LinkLabel llb_Back;
     }
 }

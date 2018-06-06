@@ -45,11 +45,18 @@ namespace COMP329_Milestone3
                 MessageBox.Show("New accommodation added!", "Success", MessageBoxButtons.OK);
 
             myConnection.Close();
+
+            Hide();
+            Company form = new Company();
+            form.ShowDialog();
             Close();
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
+            Hide();
+            Company form = new Company();
+            form.ShowDialog();
             Close();
         }
     }

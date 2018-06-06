@@ -19,6 +19,7 @@ namespace COMP329_Milestone3
         }
 
         public decimal AID { get; set; }
+        private string AName { get; set; }
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
@@ -41,14 +42,27 @@ namespace COMP329_Milestone3
             if (rowUpdated == 0)
                 MessageBox.Show("Updating your accommodation failed", "Failed", MessageBoxButtons.OK);
             else
+            {
+                AName = newName;
                 MessageBox.Show("Your accommodation details have now been updated!", "Success", MessageBoxButtons.OK);
-
+            }
             myConnection.Close();
+
+            Hide();
+            ViewRooms form = new ViewRooms();
+            form.AID = AID;
+            form.AName = AName;
+            form.ShowDialog();
             Close();
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
+            Hide();
+            ViewRooms form = new ViewRooms();
+            form.AID = AID;
+            form.AName = AName;
+            form.ShowDialog();
             Close();
         }
 
@@ -62,7 +76,7 @@ namespace COMP329_Milestone3
             OracleDataReader reader = myCommand.ExecuteReader();
             reader.Read();
 
-            string AName = (string)reader["ANAME"];
+            AName = (string)reader["ANAME"];
             string street = (string)reader["STREET"];
             string city = (string)reader["city"];
             string region = (string)reader["region"];

@@ -23,9 +23,11 @@ namespace COMP329_Milestone3
 
         private void btn_EditAccom_Click(object sender, EventArgs e)
         {
+            Hide();
             EditAccommodation editAccommodation = new EditAccommodation();
             editAccommodation.AID = AID;
             editAccommodation.ShowDialog();
+            Close();
         }
 
         private void ViewRooms_Load(object sender, EventArgs e)
@@ -48,7 +50,8 @@ namespace COMP329_Milestone3
                         Price = (decimal)reader["Price"],
                         Description = (string)reader["Description"],
                         Quantity = (decimal)reader["Quantity"],
-                        RName = (string)reader["RName"]
+                        RName = (string)reader["RName"],
+                        AID = AID
                     };
 
                     var myUserControl = new Uc_ViewRooms
@@ -66,8 +69,25 @@ namespace COMP329_Milestone3
             }
             else
                 lb_NoRoom.Visible = true;
+
             reader.Close();
             myConnection.Close();
+        }
+
+        private void llb_Back_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Hide();
+            Company company = new Company();
+            company.ShowDialog();
+            Close();
+        }
+
+        private void btn_NewAccommodation_Click(object sender, EventArgs e)
+        {
+            Hide();
+            NewRoom form = new NewRoom();
+            form.ShowDialog();
+            Close();
         }
     }
 }
