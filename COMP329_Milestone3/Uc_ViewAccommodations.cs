@@ -18,10 +18,7 @@ namespace COMP329_Milestone3
             InitializeComponent();
         }
 
-        public Accommodation data
-        {
-            get; set;
-        }
+        public Accommodation data { get; set; }
 
         public void DataBind()
         {
@@ -37,7 +34,6 @@ namespace COMP329_Milestone3
             ((Form)TopLevelControl).Hide();
             ViewRooms rooms = new ViewRooms();
             rooms.AID = data.AID;
-            rooms.AName = data.AName;
             rooms.ShowDialog();
             ((Form)TopLevelControl).Close();
         }

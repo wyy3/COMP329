@@ -19,7 +19,6 @@ namespace COMP329_Milestone3
         }
         
         public Room room { get; set; }
-        private string AName = "";
 
         private void EditRoom_Load(object sender, EventArgs e)
         {
@@ -28,18 +27,6 @@ namespace COMP329_Milestone3
             tb_Price.Text = room.Price.ToString();
             tb_Quantity.Text = room.Quantity.ToString();
             tb_Description.Text = room.Description;
-
-            //get AName;
-            OracleConnection myConnection = Db.Connection();
-            myConnection.Open();
-            OracleCommand myCommand = myConnection.CreateCommand();
-            myCommand.CommandType = CommandType.Text;
-            myCommand.CommandText = "SELECT ANAME FROM ACCOMMODATION WHERE AID =" + room.AID;
-            OracleDataReader reader = myCommand.ExecuteReader();
-            reader.Read();
-            AName = (string)reader["AName"];
-            reader.Close();
-            myConnection.Close();
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
@@ -77,7 +64,6 @@ namespace COMP329_Milestone3
             Hide();
             ViewRooms form = new ViewRooms();
             form.AID = room.AID;
-            form.AName = AName;
             form.ShowDialog();
             Close();
         }
@@ -87,7 +73,6 @@ namespace COMP329_Milestone3
             Hide();
             ViewRooms form = new ViewRooms();
             form.AID = room.AID;
-            form.AName = AName;
             form.ShowDialog();
             Close();
         }

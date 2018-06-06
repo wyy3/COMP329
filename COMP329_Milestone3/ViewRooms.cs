@@ -19,7 +19,6 @@ namespace COMP329_Milestone3
         }
 
         public decimal AID { get; set; }
-        public string AName { get; set; }
 
         private void btn_EditAccom_Click(object sender, EventArgs e)
         {
@@ -32,11 +31,12 @@ namespace COMP329_Milestone3
 
         private void ViewRooms_Load(object sender, EventArgs e)
         {
-            lb_AName.Text = AName;
+            bool Loaded = false;
+
             OracleConnection myConnection = Db.Connection();
             myConnection.Open();
             OracleCommand myCommand = myConnection.CreateCommand();
-            myCommand.CommandText = "SELECT ROOMTYPEID, PRICE, DESCRIPTION, QUANTITY, RNAME FROM ROOM WHERE ACCOMMODATIONID = " + AID;
+            myCommand.CommandText = "SELECT a.ANAME, ROOMTYPEID, PRICE, r.DESCRIPTION, QUANTITY, RNAME FROM ROOM r INNER JOIN ACCOMMODATION a ON r.ACCOMMODATIONID = a.AID AND r.ACCOMMODATIONID =" + AID;
             OracleDataReader reader = myCommand.ExecuteReader();
 
             int top = 10;
@@ -44,6 +44,13 @@ namespace COMP329_Milestone3
             {
                 while (reader.Read())
                 {
+                    if(!Loaded)
+                    {
+                        string AName = (string)reader["AName"];
+                        lb_AName.Text = AName;
+                        Loaded = true;
+                    }
+                    
                     Room data = new Room
                     {
                         RoomTypeID = (decimal)reader["RoomTypeID"],
