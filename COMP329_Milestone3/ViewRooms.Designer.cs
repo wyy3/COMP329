@@ -117,7 +117,7 @@
             this.Controls.Add(this.pn_Container);
             this.Controls.Add(this.lb_AName);
             this.Name = "ViewRooms";
-            this.Text = "Company Register";
+            this.Text = "View Rooms";
             this.Load += new System.EventHandler(this.ViewRooms_Load);
             this.pn_Container.ResumeLayout(false);
             this.pn_Container.PerformLayout();

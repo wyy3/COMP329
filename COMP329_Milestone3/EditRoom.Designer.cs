@@ -187,7 +187,7 @@
             this.Controls.Add(this.lb_LastName);
             this.Controls.Add(this.lb_RName);
             this.Name = "EditRoom";
-            this.Text = "Company Register";
+            this.Text = "Edit Room";
             this.Load += new System.EventHandler(this.EditRoom_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

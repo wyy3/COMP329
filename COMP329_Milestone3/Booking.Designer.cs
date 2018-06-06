@@ -239,7 +239,7 @@
             this.Controls.Add(this.lb_RName);
             this.Controls.Add(this.lb_AName);
             this.Name = "Booking";
-            this.Text = "Room Name";
+            this.Text = "Booking";
             this.Load += new System.EventHandler(this.Booking_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

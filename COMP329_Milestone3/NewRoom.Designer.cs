@@ -189,7 +189,7 @@
             this.Controls.Add(this.lb_LastName);
             this.Controls.Add(this.label2);
             this.Name = "NewRoom";
-            this.Text = "Company Register";
+            this.Text = "New Room";
             this.ResumeLayout(false);
             this.PerformLayout();
 
