@@ -60,14 +60,6 @@ namespace COMP329_Milestone3
             }
             reader.Close();
             myConnection.Close();
-        }
-
-        private void btn_Register_Click(object sender, EventArgs e)
-        {
-            Hide();
-            CompanyRegister form = new CompanyRegister();
-            form.ShowDialog();
-            Close();
-        }
+        }        
     }
 }

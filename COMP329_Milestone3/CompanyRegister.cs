@@ -25,15 +25,6 @@ namespace COMP329_Milestone3
             form.ShowDialog();
             Close();
         }
-
-        private void btn_Signin_Click(object sender, EventArgs e)
-        {
-            Hide();
-            CompanySignIn form = new CompanySignIn();
-            form.ShowDialog();
-            Close();
-        }
-
         private void btn_Register_Click(object sender, EventArgs e)
         {
             string CName = tb_CName.Text.Trim();

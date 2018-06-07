@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btn_Signin = new System.Windows.Forms.Button();
-            this.btn_Register = new System.Windows.Forms.Button();
             this.tb_Email = new System.Windows.Forms.TextBox();
             this.tb_Password = new System.Windows.Forms.TextBox();
             this.lb_Email = new System.Windows.Forms.Label();
@@ -48,17 +47,6 @@
             this.btn_Signin.Text = "Sign in";
             this.btn_Signin.UseVisualStyleBackColor = true;
             this.btn_Signin.Click += new System.EventHandler(this.btn_Signin_Click);
-            // 
-            // btn_Register
-            // 
-            this.btn_Register.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Register.Location = new System.Drawing.Point(302, 314);
-            this.btn_Register.Name = "btn_Register";
-            this.btn_Register.Size = new System.Drawing.Size(125, 28);
-            this.btn_Register.TabIndex = 20;
-            this.btn_Register.Text = "Register Page";
-            this.btn_Register.UseVisualStyleBackColor = true;
-            this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 
             // tb_Email
             // 
@@ -130,7 +118,6 @@
             this.Controls.Add(this.llb_Back);
             this.Controls.Add(this.lb_AName);
             this.Controls.Add(this.btn_Signin);
-            this.Controls.Add(this.btn_Register);
             this.Controls.Add(this.tb_Email);
             this.Controls.Add(this.tb_Password);
             this.Controls.Add(this.lb_Email);
@@ -145,7 +132,6 @@
         #endregion
 
         private System.Windows.Forms.Button btn_Signin;
-        private System.Windows.Forms.Button btn_Register;
         private System.Windows.Forms.TextBox tb_Email;
         private System.Windows.Forms.TextBox tb_Password;
         private System.Windows.Forms.Label lb_Email;
