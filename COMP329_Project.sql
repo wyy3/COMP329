@@ -94,7 +94,7 @@ INSERT INTO Accommodation (Aid,AName,street,city,region,description,CompanyID) V
 
 INSERT INTO Room (RoomTypeID,price,description,quantity,RName,AccommodationID) VALUES (1,'22.17','For one person',5,'Single Room',8);
 INSERT INTO Room (RoomTypeID,price,description,quantity,RName,AccommodationID) VALUES (2,'91.36','For two people',13,'Double Room',6);
-INSERT INTO Room (RoomTypeID,price,description,quantity,RName,AccommodationID) VALUES (3,'34.47','For three people',14,'Triple Room',5);
+INSERT INTO Room (RoomTypeID,price,description,quantity,RName,AccommodationID) VALUES (3,'34.47','For three people',3,'Triple Room',5);
 INSERT INTO Room (RoomTypeID,price,description,quantity,RName,AccommodationID) VALUES (4,'52.00','For four people',20,'Quad Room',7);
 INSERT INTO Room (RoomTypeID,price,description,quantity,RName,AccommodationID) VALUES (5,'26.97','With a queen-sized bed',17,'Queen Room',6);
 INSERT INTO Room (RoomTypeID,price,description,quantity,RName,AccommodationID) VALUES (6,'70.86','With a king-sized bed',2,'King Room',7);
