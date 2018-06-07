@@ -39,7 +39,7 @@ namespace COMP329_Milestone3
             OracleCommand myCommand = myConnection.CreateCommand();
             myCommand.CommandType = CommandType.Text;
             //check if a company already exists
-            myCommand.CommandText = "SELECT COMPANYID FROM COMPANY WHERE CNAME = '" + CName + "'";
+            myCommand.CommandText = "SELECT COMPANYID FROM COMPANY WHERE Email = '" + email + "'";
             OracleDataReader reader = myCommand.ExecuteReader();
 
             if (reader.HasRows)
