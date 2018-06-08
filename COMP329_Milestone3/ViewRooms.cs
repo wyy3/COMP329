@@ -97,10 +97,11 @@ namespace COMP329_Milestone3
             Close();
         }
 
-        private void btn_NewAccommodation_Click(object sender, EventArgs e)
+        private void btn_NewRoom_Click(object sender, EventArgs e)
         {
             Hide();
             NewRoom form = new NewRoom();
+            form.AID = AID;
             form.ShowDialog();
             Close();
         }

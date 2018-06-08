@@ -71,6 +71,7 @@
             this.btn_Create.TabIndex = 46;
             this.btn_Create.Text = "Create";
             this.btn_Create.UseVisualStyleBackColor = true;
+            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
             // btn_Cancel
             // 
@@ -81,6 +82,7 @@
             this.btn_Cancel.TabIndex = 45;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // tb_Description
             // 
