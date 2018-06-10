@@ -35,7 +35,7 @@ CREATE TABLE Accommodation (
 
 CREATE TABLE Room (
   RoomTypeID integer NOT NULL,
-  price DECIMAL(4,2),
+  price DECIMAL(6,2),
   description varchar(1024),
   quantity integer,
   RName varchar(255),
@@ -57,7 +57,7 @@ CREATE TABLE Customer (
 
 CREATE TABLE Booking (
   BookingID integer NOT NULL,
-  price DECIMAL(4,2),
+  price DECIMAL(6,2),
   CheckInDate date,
   RoomTypeID integer,
   CONSTRAINT booking_pk PRIMARY KEY (BookingID),

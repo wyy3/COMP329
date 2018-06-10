@@ -60,7 +60,7 @@
             this.tb_Quantity.Name = "tb_Quantity";
             this.tb_Quantity.Size = new System.Drawing.Size(323, 27);
             this.tb_Quantity.TabIndex = 47;
-            this.tb_Quantity.Text = "Test";
+            this.tb_Quantity.Text = "1";
             // 
             // btn_Create
             // 
@@ -91,7 +91,7 @@
             this.tb_Description.Name = "tb_Description";
             this.tb_Description.Size = new System.Drawing.Size(323, 27);
             this.tb_Description.TabIndex = 44;
-            this.tb_Description.Text = "test@gmail.com";
+            this.tb_Description.Text = "Single Room";
             // 
             // tb_Price
             // 
@@ -100,7 +100,7 @@
             this.tb_Price.Name = "tb_Price";
             this.tb_Price.Size = new System.Drawing.Size(323, 27);
             this.tb_Price.TabIndex = 43;
-            this.tb_Price.Text = "0220708002";
+            this.tb_Price.Text = "95.5";
             // 
             // tb_RName
             // 
@@ -109,7 +109,7 @@
             this.tb_RName.Name = "tb_RName";
             this.tb_RName.Size = new System.Drawing.Size(323, 27);
             this.tb_RName.TabIndex = 42;
-            this.tb_RName.Text = "Test";
+            this.tb_RName.Text = "Test Room";
             // 
             // lb_PhoneNo
             // 
