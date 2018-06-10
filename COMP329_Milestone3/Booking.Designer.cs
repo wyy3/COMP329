@@ -214,6 +214,7 @@
             this.dtp_DoB.Name = "dtp_DoB";
             this.dtp_DoB.Size = new System.Drawing.Size(323, 20);
             this.dtp_DoB.TabIndex = 19;
+            this.dtp_DoB.Value = new System.DateTime(1999, 6, 10, 22, 40, 0, 0);
             // 
             // Booking
             // 
