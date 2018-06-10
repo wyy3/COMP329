@@ -37,6 +37,13 @@ namespace COMP329_Milestone3
             string phone = tb_PhoneNo.Text.Trim();
             string email = tb_Email.Text.Trim();
 
+            //check if the customer is over 18 years old
+            if (dtp_DoB.Value.Year > 2000)
+            {
+                MessageBox.Show("Booking Failed", "Age Limit", MessageBoxButtons.OK);
+                return;
+            }
+                
             int rowUpdated = -1;
             decimal CID = -1;
 
